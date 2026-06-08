@@ -1,125 +1,101 @@
 ---
 title: "Event 1"
-date: 2024-01-01
+date: 2026-06-06
 weight: 1
 chapter: false
 pre: " <b> 4.1. </b> "
 ---
 
-{{% notice warning %}}
+<!-- {{% notice warning %}}
 ⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+{{% /notice %}} -->
 
-# Bài thu hoạch “GenAI-powered App-DB Modernization workshop”
+# Bài thu hoạch “Meetup 06/06/2026”
 
-### Mục Đích Của Sự Kiện
+### Mục đích của sự kiện
 
-- Chia sẻ best practices trong thiết kế ứng dụng hiện đại
-- Giới thiệu phương pháp DDD và event-driven architecture
-- Hướng dẫn lựa chọn compute services phù hợp
-- Giới thiệu công cụ AI hỗ trợ development lifecycle
+Buổi meetup ngày 06/06/2026 được tổ chức nhằm chia sẻ các chủ đề công nghệ thực tiễn, giúp người tham dự có thêm góc nhìn về những xu hướng đang được áp dụng trong phát triển phần mềm, cloud computing, an ninh mạng, hệ thống phân tán và kỹ năng làm việc trong môi trường công nghệ. Đây là một dịp để tôi tiếp cận nhiều chủ đề khác nhau trong cùng một sự kiện, từ đó hiểu thêm về các hướng phát triển nghề nghiệp cũng như các kỹ thuật đang được sử dụng trong thực tế.
 
-### Danh Sách Diễn Giả
+### Thông tin sự kiện
 
-- **Jignesh Shah** - Director, Open Source Databases
-- **Erica Liu** - Sr. GTM Specialist, AppMod
-- **Fabrianne Effendi** - Assc. Specialist SA, Serverless Amazon Web Services
+- **Thời gian:** 09:00 - 12:00, ngày 06/06/2026
+- **Hình thức tham gia:** Trực tiếp tại văn phòng
+- **Tài liệu tham khảo:** Bộ slide do ban tổ chức cung cấp trong thư mục **"Meetup 06/06/2026"**
 
-### Nội Dung Nổi Bật
+### Danh sách diễn giả và chủ đề trình bày
 
-#### Đưa ra các ảnh hưởng tiêu cực của kiến trúc ứng dụng cũ
+- **Bao Huynh** – *Docker – A containerization technology*, Junior Cloud Native Developer - Endava Vietnam, Founder / Head Lab - ITea Lab
 
-- Thời gian release sản phẩm lâu → Mất doanh thu/bỏ lỡ cơ hội
-- Hoạt động kém hiệu quả → Mất năng suất, tốn kém chi phí
-- Không tuân thủ các quy định về bảo mật → Mất an ninh, uy tín
+- **Lê Hoàng Gia Đại** – *WAF + ML for Cyber Attack Detection - Machine Learning-based Network Intrusion Detection System (NIDS) on AWS*, ID: 2280618445, Team: AWS G3
 
-#### Chuyển đổi sang kiến trúc ứng dụng mới - Microservice Architecture
+- **Nguyen Quoc Bao** – *Multiplayer in the Cloud, Connecting Godot Clients with AWS WebSockets*
 
-Chuyển đổi thành hệ thống modular – từng chức năng là một **dịch vụ độc lập** giao tiếp với nhau qua **sự kiện** với 3 trụ cột cốt lõi:
+- **Truong Huy Phuoc** – *The Art of Effective Teamwork*
 
-- **Queue Management**: Xử lý tác vụ bất đồng bộ
-- **Caching Strategy:** Tối ưu performance
-- **Message Handling:** Giao tiếp linh hoạt giữa services
+- **Việt Phát** – *GRAPHRAG, Build GraphRAG applications using Amazon Bedrock and Amazon Neptune*
 
-#### Domain-Driven Design (DDD)
+- **Tran Trung Vinh** – *From IT Helpdesk to Senior Sysadmin, A practical career journey from IT Helpdesk to Senior Sysadmin and the first steps toward Cloud and DevOps*, System Administrator at Central Retail Group
 
-- **Phương pháp 4 bước**: Xác định domain events → sắp xếp timeline → identify actors → xác định bounded contexts
-- **Case study bookstore**: Minh họa cách áp dụng DDD thực tế
-- **Context mapping**: 7 patterns tích hợp bounded contexts
+### Nội dung nổi bật
 
-#### Event-Driven Architecture
+#### 1. Docker – A containerization technology
 
-- **3 patterns tích hợp**: Publish/Subscribe, Point-to-point, Streaming
-- **Lợi ích**: Loose coupling, scalability, resilience
-- **So sánh sync vs async**: Hiểu rõ trade-offs (sự đánh đổi)
+Phần trình bày về Docker giúp tôi hiểu rõ hơn về containerization và vai trò của Docker trong việc đóng gói ứng dụng. Thay vì phải cài đặt và cấu hình môi trường riêng cho từng máy, Docker cho phép ứng dụng và các thành phần phụ thuộc được đóng gói vào container để triển khai đồng nhất hơn. Từ nội dung này, tôi nhận ra Docker là một công cụ rất quan trọng trong quá trình phát triển và triển khai phần mềm hiện đại, đặc biệt trong môi trường cloud và DevOps.
 
-#### Compute Evolution
+#### 2. WAF + ML for Cyber Attack Detection
 
-- **Shared Responsibility Model**: Từ EC2 → ECS → Fargate → Lambda
-- **Serverless benefits**: No server management, auto-scaling, pay-for-value
-- **Functions vs Containers**: Criteria lựa chọn phù hợp
+Chủ đề này mang lại cho tôi góc nhìn về cách kết hợp giữa bảo mật ứng dụng web và machine learning để phát hiện tấn công mạng. Qua phần chia sẻ, tôi hiểu rằng các giải pháp như WAF và hệ thống phát hiện xâm nhập có thể được tăng cường bằng mô hình học máy để nhận diện các hành vi bất thường hiệu quả hơn. Nội dung này cho thấy an ninh mạng hiện nay không chỉ dựa vào các quy tắc tĩnh mà còn có thể khai thác dữ liệu và AI để nâng cao khả năng phòng vệ.
 
-#### Amazon Q Developer
+#### 3. Multiplayer in the Cloud, Connecting Godot Clients with AWS WebSockets
 
-- **SDLC automation**: Từ planning đến maintenance
-- **Code transformation**: Java upgrade, .NET modernization
-- **AWS Transform agents**: VMware, Mainframe, .NET migration
+Đây là một chủ đề khá thú vị vì kết hợp giữa phát triển ứng dụng tương tác thời gian thực và hạ tầng cloud. Từ phần trình bày, tôi hiểu rằng AWS WebSockets có thể được sử dụng để kết nối nhiều client trong môi trường multiplayer, giúp các ứng dụng có khả năng giao tiếp hai chiều theo thời gian thực. Chủ đề này mở ra cho tôi một hướng nhìn mới về cách cloud services hỗ trợ các ứng dụng game và hệ thống realtime.
 
-### Những Gì Học Được
+#### 4. The Art of Effective Teamwork
 
-#### Tư Duy Thiết Kế
+Phần chia sẻ về teamwork tập trung nhiều hơn vào kỹ năng làm việc nhóm và sự phối hợp giữa các thành viên trong môi trường công nghệ. Tôi nhận thấy rằng bên cạnh kiến thức kỹ thuật, kỹ năng giao tiếp, phân chia nhiệm vụ, hỗ trợ lẫn nhau và xử lý xung đột cũng đóng vai trò rất quan trọng trong một dự án. Đây là một bài học hữu ích vì trong thực tế, hiệu quả của một nhóm thường phụ thuộc rất nhiều vào cách mọi người phối hợp với nhau.
 
-- **Business-first approach**: Luôn bắt đầu từ business domain, không phải technology
-- **Ubiquitous language**: Importance của common vocabulary giữa business và tech teams
-- **Bounded contexts**: Cách identify và manage complexity trong large systems
+#### 5. GraphRAG with Amazon Bedrock and Amazon Neptune
 
-#### Kiến Trúc Kỹ Thuật
+Chủ đề GraphRAG mang lại cho tôi thêm hiểu biết về cách xây dựng các ứng dụng AI hiện đại có khả năng khai thác dữ liệu từ đồ thị tri thức. Việc kết hợp Amazon Bedrock với Amazon Neptune cho thấy một hướng triển khai khá thực tế để xây dựng các ứng dụng thông minh hơn trong truy xuất và suy luận dữ liệu. Phần trình bày này giúp tôi thấy rõ hơn vai trò của dữ liệu, mô hình ngôn ngữ lớn và cơ sở dữ liệu graph trong các hệ thống AI thế hệ mới.
 
-- **Event storming technique**: Phương pháp thực tế để mô hình hóa quy trình kinh doanh
-- Sử dụng **Event-driven communication** thay vì synchronous calls
-- **Integration patterns**: Hiểu khi nào dùng sync, async, pub/sub, streaming
-- **Compute spectrum**: Criteria chọn từ VM → containers → serverless
+#### 6. From IT Helpdesk to Senior Sysadmin
 
-#### Chiến Lược Hiện Đại Hóa
+Đây là phần trình bày mang tính định hướng nghề nghiệp rất rõ ràng. Thông qua hành trình từ IT Helpdesk đến Senior Sysadmin, tôi hiểu rằng con đường phát triển trong ngành công nghệ thường bắt đầu từ những vị trí nền tảng và tích lũy dần kinh nghiệm qua thực tế. Diễn giả cũng chia sẻ về những bước đầu tiếp cận Cloud và DevOps, từ đó cho tôi thêm động lực để tiếp tục học hỏi và xây dựng nền tảng kỹ thuật vững chắc hơn.
 
-- **Phased approach**: Không rush, phải có roadmap rõ ràng
-- **7Rs framework**: Nhiều con đường khác nhau tùy thuộc vào đặc điểm của mỗi ứng dụng
-- **ROI measurement**: Cost reduction + business agility
+### Kết quả đạt được
 
-### Ứng Dụng Vào Công Việc
+Sau khi tham gia sự kiện, tôi đạt được một số kết quả ban đầu như sau:
 
-- **Áp dụng DDD** cho project hiện tại: Event storming sessions với business team
-- **Refactor microservices**: Sử dụng bounded contexts để identify service boundaries
-- **Implement event-driven patterns**: Thay thế một số sync calls bằng async messaging
-- **Serverless adoption**: Pilot AWS Lambda cho một số use cases phù hợp
-- **Try Amazon Q Developer**: Integrate vào development workflow để boost productivity
+- Có cơ hội tham gia trực tiếp một buổi meetup công nghệ tại văn phòng.
+- Tiếp cận được nhiều chủ đề công nghệ đa dạng trong cùng một sự kiện.
+- Hiểu thêm về Docker, an ninh mạng, cloud WebSockets, teamwork, GraphRAG và định hướng nghề nghiệp trong lĩnh vực IT.
+- Nhận thấy rõ hơn vai trò của cloud computing và AI trong các ứng dụng hiện đại.
+- Thu thập được bộ slide của chương trình để có thể xem lại và tìm hiểu sâu hơn sau buổi gặp mặt.
 
-### Trải nghiệm trong event
+### Khó khăn gặp phải
 
-Tham gia workshop **“GenAI-powered App-DB Modernization”** là một trải nghiệm rất bổ ích, giúp tôi có cái nhìn toàn diện về cách hiện đại hóa ứng dụng và cơ sở dữ liệu bằng các phương pháp và công cụ hiện đại. Một số trải nghiệm nổi bật:
+Vì đây là lần đầu tiên tôi tham gia một buổi meetup có nhiều nội dung chuyên môn được trình bày liên tục, tôi gặp một số khó khăn như:
 
-#### Học hỏi từ các diễn giả có chuyên môn cao
-- Các diễn giả đến từ AWS và các tổ chức công nghệ lớn đã chia sẻ **best practices** trong thiết kế ứng dụng hiện đại.
-- Qua các case study thực tế, tôi hiểu rõ hơn cách áp dụng **Domain-Driven Design (DDD)** và **Event-Driven Architecture** vào các project lớn.
+- Chưa thể nắm bắt toàn bộ nội dung kỹ thuật ngay trong buổi đầu tham gia.
+- Một số chủ đề còn khá mới như GraphRAG, WAF kết hợp machine learning hay WebSockets trong môi trường cloud.
+- Chưa có nhiều kinh nghiệm ghi chú nhanh các ý chính trong lúc theo dõi phần trình bày.
 
-#### Trải nghiệm kỹ thuật thực tế
-- Tham gia các phiên trình bày về **event storming** giúp tôi hình dung cách **mô hình hóa quy trình kinh doanh** thành các domain events.
-- Học cách **phân tách microservices** và xác định **bounded contexts** để quản lý sự phức tạp của hệ thống lớn.
-- Hiểu rõ trade-offs giữa **synchronous và asynchronous communication** cũng như các pattern tích hợp như **pub/sub, point-to-point, streaming**.
+Tuy vậy, tôi đã lưu lại bộ slide của chương trình để có thể xem lại và dần hiểu sâu hơn các nội dung đã được chia sẻ.
 
-#### Ứng dụng công cụ hiện đại
-- Trực tiếp tìm hiểu về **Amazon Q Developer**, công cụ AI hỗ trợ SDLC từ lập kế hoạch đến maintenance.
-- Học cách **tự động hóa code transformation** và pilot serverless với **AWS Lambda**, từ đó nâng cao năng suất phát triển.
+### Bài học rút ra
 
-#### Kết nối và trao đổi
-- Workshop tạo cơ hội trao đổi trực tiếp với các chuyên gia, đồng nghiệp và team business, giúp **nâng cao ngôn ngữ chung (ubiquitous language)** giữa business và tech.
-- Qua các ví dụ thực tế, tôi nhận ra tầm quan trọng của **business-first approach**, luôn bắt đầu từ nhu cầu kinh doanh thay vì chỉ tập trung vào công nghệ.
+Từ buổi meetup này, tôi nhận thấy rằng việc học công nghệ không chỉ dừng lại ở kiến thức trong sách vở mà còn cần tiếp xúc với các chủ đề thực tế, các case study và kinh nghiệm từ người đang làm việc trong ngành. Mỗi bài trình bày đều giúp tôi mở rộng góc nhìn, hiểu thêm về cách công nghệ được ứng dụng trong thực tế và nhận ra những kỹ năng cần thiết để phát triển bản thân trong môi trường công nghệ.
 
-#### Bài học rút ra
-- Việc áp dụng DDD và event-driven patterns giúp giảm **coupling**, tăng **scalability** và **resilience** cho hệ thống.
-- Chiến lược hiện đại hóa cần **phased approach** và đo lường **ROI**, không nên vội vàng chuyển đổi toàn bộ hệ thống.
-- Các công cụ AI như Amazon Q Developer có thể **boost productivity** nếu được tích hợp vào workflow phát triển hiện tại.
+### Trải nghiệm trong sự kiện
 
-#### Một số hình ảnh khi tham gia sự kiện
-* Thêm các hình ảnh của các bạn tại đây
-> Tổng thể, sự kiện không chỉ cung cấp kiến thức kỹ thuật mà còn giúp tôi thay đổi cách tư duy về thiết kế ứng dụng, hiện đại hóa hệ thống và phối hợp hiệu quả hơn giữa các team.
+Buổi meetup ngày 06/06/2026 là lần đầu tiên tôi tham gia một sự kiện công nghệ trực tiếp tại văn phòng, vì vậy trải nghiệm này để lại cho tôi khá nhiều ấn tượng. Dù chưa thể hiểu ngay toàn bộ các nội dung chuyên sâu, tôi vẫn cảm nhận được không khí học hỏi nghiêm túc và chuyên nghiệp của chương trình. Việc được nghe nhiều diễn giả chia sẻ trong cùng một buổi giúp tôi thấy rõ hơn sự đa dạng của ngành công nghệ, từ cloud, container, AI, bảo mật cho đến kỹ năng làm việc nhóm và định hướng nghề nghiệp.
+
+Bên cạnh đó, tôi cũng nhận thấy tầm quan trọng của việc chuẩn bị trước kiến thức nền tảng để có thể tiếp thu tốt hơn trong các buổi meetup tiếp theo. Bộ slide do ban tổ chức cung cấp là tài liệu rất hữu ích để tôi xem lại và hệ thống hóa các ý chính sau sự kiện.
+
+### Hình ảnh tham gia sự kiện
+
+<!-- *Thêm hình ảnh chụp trước khi buổi meetup bắt đầu tại đây.* -->
+*Hình ảnh chụp trước khi buổi meetup bắt đầu:*
+![Event 1 picture](/images/Event1.jpg)
+
+> Tổng thể, sự kiện đã mang lại cho tôi một góc nhìn thực tế hơn về các chủ đề công nghệ đang được quan tâm hiện nay, đồng thời tạo động lực để tôi tiếp tục học hỏi và chuẩn bị tốt hơn cho các buổi chia sẻ tiếp theo.
