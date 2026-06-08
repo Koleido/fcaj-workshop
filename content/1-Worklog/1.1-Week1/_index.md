@@ -38,6 +38,14 @@ Having an overview of these service groups helped me build a general understandi
 
 After gaining basic theoretical knowledge, I created an AWS Free Tier account to prepare for practical exercises. This step was essential because most upcoming workshops and labs require direct access to AWS resources. While creating the account, I paid attention to identity verification, billing configuration, and Free Tier limitations to avoid unexpected charges.
 
+### AWS Management Console
+
+![AWS Console Home](/images/Week1/AwsConsoleHome.png)
+
+During the practice session, I logged into the AWS Management Console to familiarize myself with the administration interface and observe the basic services.
+
+*AWS Console after logging in successfully.*
+
 #### 4. Exploring AWS Management Console and AWS CLI
 
 Next, I learned the two primary ways of interacting with AWS:
@@ -46,6 +54,14 @@ Next, I learned the two primary ways of interacting with AWS:
 * **AWS CLI (Command Line Interface)**: A command-line tool that allows users to interact with AWS services through terminal commands.
 
 I installed and configured AWS CLI on my personal computer, including setting up the Access Key, Secret Access Key, and Default Region. After configuration, I executed several basic commands to verify connectivity and become familiar with the command syntax.
+
+### AWS CLI Configuration
+
+I installed and tested the AWS CLI on my personal computer to familiarize myself with command-line operations.
+
+![AWS CLI](/images/Week1/AwsCli.png)
+
+*AWS CLI version and configuration check.*
 
 #### 5. Learning Amazon EC2 and Launching an Instance
 

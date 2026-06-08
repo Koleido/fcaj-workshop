@@ -33,12 +33,28 @@ Việc học ở mức tổng quan giúp tôi không bị rối khi sau này ti�
 #### 3. Tạo tài khoản AWS Free Tier
 Sau khi tìm hiểu sơ lược về AWS, tôi tiến hành tạo tài khoản AWS Free Tier để có môi trường thực hành. Đây là bước rất quan trọng vì hầu hết các bài thực hành sau này đều cần truy cập trực tiếp vào AWS Console. Trong quá trình tạo tài khoản, tôi chú ý đến các thông tin xác thực, phương thức thanh toán và những giới hạn của Free Tier để tránh phát sinh chi phí không mong muốn.
 
+### AWS Management Console
+
+Trong quá trình thực hành, tôi đã đăng nhập vào AWS Management Console để làm quen với giao diện quản trị và quan sát các dịch vụ cơ bản.
+
+![AWS Console Home](/images/Week1/AwsConsoleHome.png)
+
+*AWS Management Console after successful login.*
+
 #### 4. Làm quen với AWS Management Console và AWS CLI
 Tiếp theo, tôi tìm hiểu hai cách thao tác chính với AWS:
 - **AWS Management Console**: giao diện web trực quan để thao tác thủ công.
 - **AWS CLI**: công cụ dòng lệnh giúp thao tác nhanh và thuận tiện hơn trong nhiều tình huống.
 
 Tôi thực hiện cài đặt và cấu hình AWS CLI trên máy tính, bao gồm việc thiết lập Access Key, Secret Key và Default Region. Sau đó tôi thử một số lệnh cơ bản để kiểm tra cấu hình và làm quen với cú pháp.
+
+### AWS CLI Configuration
+
+Tôi đã cài đặt và kiểm tra AWS CLI trên máy tính cá nhân để làm quen với thao tác dòng lệnh.
+
+![AWS CLI](/images/Week1/AwsCli.png)
+
+*Kiểm tra phiên bản AWS CLI và cấu hình.*
 
 #### 5. Tìm hiểu EC2 và thực hành khởi tạo instance
 Ở cuối tuần, tôi bắt đầu học về Amazon EC2, một trong những dịch vụ quan trọng nhất của AWS. Tôi tìm hiểu các khái niệm cơ bản như:
