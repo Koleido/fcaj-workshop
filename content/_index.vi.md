@@ -6,7 +6,7 @@ chapter: false
 ---
 
 # Báo cáo thực tập
-### Thông tin sinh viên:
+### Thông tin sinh viên
 &emsp; **Họ và tên:** Bùi Phạm Ngọc Khôi
 
 &emsp; **Số điện thoại:** 0968413318
@@ -23,7 +23,7 @@ chapter: false
 
 &emsp; **Vị trí thực tập:** Workforce Bootcamp - First Cloud AI Journey
 
-&emsp; **Thời gian thực tập:** Từ ngày 12/08/2025 đến ngày 12/11/2025
+&emsp; **Thời gian thực tập:** Từ ngày 15/06/2026 đến ngày 17/08/2026
 
 ![Ảnh đại diện](/images/HinhThe.jpg)
 

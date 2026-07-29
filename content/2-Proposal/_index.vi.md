@@ -1,108 +1,303 @@
 ---
-title: "Bản đề xuất"
-date: 2024-01-01
+
+title: "Đề xuất dự án"
+date: 2026-06-20
 weight: 2
 chapter: false
 pre: " <b> 2. </b> "
----
-{{% notice warning %}}
+--------------------
+
+<!-- {{% notice warning %}}
 ⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+{{% /notice %}} -->
 
-Tại phần này, bạn cần tóm tắt các nội dung trong workshop mà bạn **dự tính** sẽ làm.
+# HCMUT Cinema
 
-# IoT Weather Platform for Lab Research  
-## Giải pháp AWS Serverless hợp nhất cho giám sát thời tiết thời gian thực  
+# Hệ thống đặt vé rạp chiếu phim Cloud-Native trên Amazon Web Services
 
-### 1. Tóm tắt điều hành  
-IoT Weather Platform được thiết kế dành cho nhóm *ITea Lab* tại TP. Hồ Chí Minh nhằm nâng cao khả năng thu thập và phân tích dữ liệu thời tiết. Nền tảng hỗ trợ tối đa 5 trạm thời tiết, có khả năng mở rộng lên 10–15 trạm, sử dụng thiết bị biên Raspberry Pi kết hợp cảm biến ESP32 để truyền dữ liệu qua MQTT. Nền tảng tận dụng các dịch vụ AWS Serverless để cung cấp giám sát thời gian thực, phân tích dự đoán và tiết kiệm chi phí, với quyền truy cập giới hạn cho 5 thành viên phòng lab thông qua Amazon Cognito.  
+## 1. Tổng quan dự án
 
-### 2. Tuyên bố vấn đề  
-*Vấn đề hiện tại*  
-Các trạm thời tiết hiện tại yêu cầu thu thập dữ liệu thủ công, khó quản lý khi có nhiều trạm. Không có hệ thống tập trung cho dữ liệu hoặc phân tích thời gian thực, và các nền tảng bên thứ ba thường tốn kém và quá phức tạp.  
+Dự án **HCMUT Cinema** là một hệ thống quản lý và đặt vé rạp chiếu phim theo kiến trúc **Cloud-Native** được phát triển trên nền tảng **Amazon Web Services (AWS)**. Dự án hướng đến việc tái cấu trúc một ứng dụng đặt vé rạp chiếu phim truyền thống theo mô hình monolithic thành một kiến trúc Cloud-Native hiện đại bằng cách tách biệt frontend và backend, tận dụng các **managed AWS services** và áp dụng các **best practices** về khả năng mở rộng, độ tin cậy và khả năng bảo trì hệ thống.
 
-*Giải pháp*  
-Nền tảng sử dụng AWS IoT Core để tiếp nhận dữ liệu MQTT, AWS Lambda và API Gateway để xử lý, Amazon S3 để lưu trữ (bao gồm data lake), và AWS Glue Crawlers cùng các tác vụ ETL để trích xuất, chuyển đổi, tải dữ liệu từ S3 data lake sang một S3 bucket khác để phân tích. AWS Amplify với Next.js cung cấp giao diện web, và Amazon Cognito đảm bảo quyền truy cập an toàn. Tương tự như Thingsboard và CoreIoT, người dùng có thể đăng ký thiết bị mới và quản lý kết nối, nhưng nền tảng này hoạt động ở quy mô nhỏ hơn và phục vụ mục đích sử dụng nội bộ. Các tính năng chính bao gồm bảng điều khiển thời gian thực, phân tích xu hướng và chi phí vận hành thấp.  
+Một trong những mục tiêu quan trọng nhất của dự án là giải quyết các bài toán thực tế thường gặp trong hệ thống đặt vé trực tuyến, đặc biệt là **high concurrent access** và **seat booking conflicts (Race Condition)** trong các khung giờ cao điểm. Để giải quyết vấn đề này, hệ thống kết hợp nhiều dịch vụ AWS như **Amazon EC2**, **Amazon S3**, **Amazon RDS PostgreSQL**, **Amazon DynamoDB** và **Amazon Simple Email Service (SES)**.
 
-*Lợi ích và hoàn vốn đầu tư (ROI)*  
-Giải pháp tạo nền tảng cơ bản để các thành viên phòng lab phát triển một nền tảng IoT lớn hơn, đồng thời cung cấp nguồn dữ liệu cho những người nghiên cứu AI phục vụ huấn luyện mô hình hoặc phân tích. Nền tảng giảm bớt báo cáo thủ công cho từng trạm thông qua hệ thống tập trung, đơn giản hóa quản lý và bảo trì, đồng thời cải thiện độ tin cậy dữ liệu. Chi phí hàng tháng ước tính 0,66 USD (theo AWS Pricing Calculator), tổng cộng 7,92 USD cho 12 tháng. Tất cả thiết bị IoT đã được trang bị từ hệ thống trạm thời tiết hiện tại, không phát sinh chi phí phát triển thêm. Thời gian hoàn vốn 6–12 tháng nhờ tiết kiệm đáng kể thời gian thao tác thủ công.  
+Hệ thống bao gồm hai phân hệ chính:
 
-### 3. Kiến trúc giải pháp  
-Nền tảng áp dụng kiến trúc AWS Serverless để quản lý dữ liệu từ 5 trạm dựa trên Raspberry Pi, có thể mở rộng lên 15 trạm. Dữ liệu được tiếp nhận qua AWS IoT Core, lưu trữ trong S3 data lake và xử lý bởi AWS Glue Crawlers và ETL jobs để chuyển đổi và tải vào một S3 bucket khác cho mục đích phân tích. Lambda và API Gateway xử lý bổ sung, trong khi Amplify với Next.js cung cấp bảng điều khiển được bảo mật bởi Cognito.  
+* **Phân hệ khách hàng (Customer Portal)**
 
-![IoT Weather Station Architecture](/images/2-Proposal/edge_architecture.jpeg)
+  * Xem danh sách phim và lịch chiếu.
+  * Chọn ghế với cơ chế **real-time seat locking**.
+  * Mua vé bằng xác thực **OTP qua email**.
+  * Nhận **vé điện tử chứa QR Code** sau khi thanh toán thành công.
 
-![IoT Weather Platform Architecture](/images/2-Proposal/platform_architecture.jpeg)
+* **Phân hệ quản trị (Administrator Portal)**
 
-*Dịch vụ AWS sử dụng*  
-- *AWS IoT Core*: Tiếp nhận dữ liệu MQTT từ 5 trạm, mở rộng lên 15.  
-- *AWS Lambda*: Xử lý dữ liệu và kích hoạt Glue jobs (2 hàm).  
-- *Amazon API Gateway*: Giao tiếp với ứng dụng web.  
-- *Amazon S3*: Lưu trữ dữ liệu thô (data lake) và dữ liệu đã xử lý (2 bucket).  
-- *AWS Glue*: Crawlers lập chỉ mục dữ liệu, ETL jobs chuyển đổi và tải dữ liệu.  
-- *AWS Amplify*: Lưu trữ giao diện web Next.js.  
-- *Amazon Cognito*: Quản lý quyền truy cập cho người dùng phòng lab.  
+  * Quản lý phim, rạp, lịch chiếu và suất chiếu.
+  * Tự động phát hiện và ngăn chặn xung đột lịch chiếu.
+  * Theo dõi doanh thu và thống kê tỷ lệ lấp đầy ghế.
+  * Quản lý thông tin khách hàng và hoạt động của rạp chiếu phim.
 
-*Thiết kế thành phần*  
-- *Thiết bị biên*: Raspberry Pi thu thập và lọc dữ liệu cảm biến, gửi tới IoT Core.  
-- *Tiếp nhận dữ liệu*: AWS IoT Core nhận tin nhắn MQTT từ thiết bị biên.  
-- *Lưu trữ dữ liệu*: Dữ liệu thô lưu trong S3 data lake; dữ liệu đã xử lý lưu ở một S3 bucket khác.  
-- *Xử lý dữ liệu*: AWS Glue Crawlers lập chỉ mục dữ liệu; ETL jobs chuyển đổi để phân tích.  
-- *Giao diện web*: AWS Amplify lưu trữ ứng dụng Next.js cho bảng điều khiển và phân tích thời gian thực.  
-- *Quản lý người dùng*: Amazon Cognito giới hạn 5 tài khoản hoạt động.  
+Việc triển khai hệ thống trên AWS giúp minh họa cách các công nghệ **Cloud-Native** có thể cải thiện hiệu năng, khả năng mở rộng và trải nghiệm người dùng, đồng thời giảm độ phức tạp trong vận hành hệ thống.
 
-### 4. Triển khai kỹ thuật  
-*Các giai đoạn triển khai*  
-Dự án gồm 2 phần — thiết lập trạm thời tiết biên và xây dựng nền tảng thời tiết — mỗi phần trải qua 4 giai đoạn:  
-1. *Nghiên cứu và vẽ kiến trúc*: Nghiên cứu Raspberry Pi với cảm biến ESP32 và thiết kế kiến trúc AWS Serverless (1 tháng trước kỳ thực tập).  
-2. *Tính toán chi phí và kiểm tra tính khả thi*: Sử dụng AWS Pricing Calculator để ước tính và điều chỉnh (Tháng 1).  
-3. *Điều chỉnh kiến trúc để tối ưu chi phí/giải pháp*: Tinh chỉnh (ví dụ tối ưu Lambda với Next.js) để đảm bảo hiệu quả (Tháng 2).  
-4. *Phát triển, kiểm thử, triển khai*: Lập trình Raspberry Pi, AWS services với CDK/SDK và ứng dụng Next.js, sau đó kiểm thử và đưa vào vận hành (Tháng 2–3).  
+---
 
-*Yêu cầu kỹ thuật*  
-- *Trạm thời tiết biên*: Cảm biến (nhiệt độ, độ ẩm, lượng mưa, tốc độ gió), vi điều khiển ESP32, Raspberry Pi làm thiết bị biên. Raspberry Pi chạy Raspbian, sử dụng Docker để lọc dữ liệu và gửi 1 MB/ngày/trạm qua MQTT qua Wi-Fi.  
-- *Nền tảng thời tiết*: Kiến thức thực tế về AWS Amplify (lưu trữ Next.js), Lambda (giảm thiểu do Next.js xử lý), AWS Glue (ETL), S3 (2 bucket), IoT Core (gateway và rules), và Cognito (5 người dùng). Sử dụng AWS CDK/SDK để lập trình (ví dụ IoT Core rules tới S3). Next.js giúp giảm tải Lambda cho ứng dụng web fullstack.  
+## 2. Bài toán đặt ra
 
-### 5. Lộ trình & Mốc triển khai  
-- *Trước thực tập (Tháng 0)*: 1 tháng lên kế hoạch và đánh giá trạm cũ.  
-- *Thực tập (Tháng 1–3)*:  
-    - Tháng 1: Học AWS và nâng cấp phần cứng.  
-    - Tháng 2: Thiết kế và điều chỉnh kiến trúc.  
-    - Tháng 3: Triển khai, kiểm thử, đưa vào sử dụng.  
-- *Sau triển khai*: Nghiên cứu thêm trong vòng 1 năm.  
+### Thách thức hiện tại
 
-### 6. Ước tính ngân sách  
-Có thể xem chi phí trên [AWS Pricing Calculator](https://calculator.aws/#/estimate?id=621f38b12a1ef026842ba2ddfe46ff936ed4ab01)  
-Hoặc tải [tệp ước tính ngân sách](../attachments/budget_estimation.pdf).  
+Các hệ thống quản lý rạp chiếu phim truyền thống thường được triển khai theo kiến trúc **monolithic**, trong đó frontend, backend và cơ sở dữ liệu được liên kết chặt chẽ trong cùng một ứng dụng. Mặc dù mô hình này tương đối đơn giản ở giai đoạn đầu, nhưng khi số lượng người dùng tăng lên, hệ thống sẽ gặp nhiều khó khăn trong việc bảo trì và mở rộng.
 
-*Chi phí hạ tầng*  
-- AWS Lambda: 0,00 USD/tháng (1.000 request, 512 MB lưu trữ).  
-- S3 Standard: 0,15 USD/tháng (6 GB, 2.100 request, 1 GB quét).  
-- Truyền dữ liệu: 0,02 USD/tháng (1 GB vào, 1 GB ra).  
-- AWS Amplify: 0,35 USD/tháng (256 MB, request 500 ms).  
-- Amazon API Gateway: 0,01 USD/tháng (2.000 request).  
-- AWS Glue ETL Jobs: 0,02 USD/tháng (2 DPU).  
-- AWS Glue Crawlers: 0,07 USD/tháng (1 crawler).  
-- MQTT (IoT Core): 0,08 USD/tháng (5 thiết bị, 45.000 tin nhắn).  
+Một trong những vấn đề nghiêm trọng nhất của hệ thống đặt vé trực tuyến là xử lý **high concurrent requests**. Trong các thời điểm cao điểm, nhiều khách hàng có thể cùng lúc đặt một ghế giống nhau. Nếu không có cơ chế đồng bộ phù hợp, tình huống này sẽ dẫn đến **Race Condition**, gây ra việc bán trùng ghế hoặc dữ liệu đặt vé không nhất quán.
 
-*Tổng*: 0,7 USD/tháng, 8,40 USD/12 tháng  
-- *Phần cứng*: 265 USD một lần (Raspberry Pi 5 và cảm biến).  
+Ngoài ra, các hệ thống truyền thống còn gặp nhiều hạn chế khác:
 
-### 7. Đánh giá rủi ro  
-*Ma trận rủi ro*  
-- Mất mạng: Ảnh hưởng trung bình, xác suất trung bình.  
-- Hỏng cảm biến: Ảnh hưởng cao, xác suất thấp.  
-- Vượt ngân sách: Ảnh hưởng trung bình, xác suất thấp.  
+* Khả năng mở rộng hạn chế khi lưu lượng truy cập tăng cao.
+* Frontend và backend phụ thuộc chặt chẽ vào nhau.
+* Thời gian phản hồi chậm khi xử lý số lượng lớn yêu cầu đặt vé.
+* Quy trình xác nhận vé và gửi email còn mang tính thủ công.
+* Khó duy trì tính nhất quán dữ liệu giữa các thành phần của hệ thống.
+* Hạn chế trong việc mở rộng tính năng trong tương lai.
 
-*Chiến lược giảm thiểu*  
-- Mạng: Lưu trữ cục bộ trên Raspberry Pi với Docker.  
-- Cảm biến: Kiểm tra định kỳ, dự phòng linh kiện.  
-- Chi phí: Cảnh báo ngân sách AWS, tối ưu dịch vụ.  
+Những vấn đề này ảnh hưởng trực tiếp đến trải nghiệm của khách hàng và làm tăng độ phức tạp trong vận hành đối với quản trị viên.
 
-*Kế hoạch dự phòng*  
-- Quay lại thu thập thủ công nếu AWS gặp sự cố.  
-- Sử dụng CloudFormation để khôi phục cấu hình liên quan đến chi phí.  
+---
 
-### 8. Kết quả kỳ vọng  
-*Cải tiến kỹ thuật*: Dữ liệu và phân tích thời gian thực thay thế quy trình thủ công. Có thể mở rộng tới 10–15 trạm.  
-*Giá trị dài hạn*: Nền tảng dữ liệu 1 năm cho nghiên cứu AI, có thể tái sử dụng cho các dự án tương lai.
+### Giải pháp đề xuất
+
+Để khắc phục các thách thức trên, dự án đề xuất xây dựng một **Cloud-Native Cinema Booking System** hoàn toàn trên nền tảng Amazon Web Services.
+
+Thay vì triển khai toàn bộ ứng dụng trên một máy chủ duy nhất, hệ thống sử dụng **decoupled architecture**, tách biệt frontend và backend nhằm tăng khả năng bảo trì và mở rộng.
+
+Giải pháp bao gồm các dịch vụ AWS phối hợp với nhau như sau:
+
+* **Amazon S3** lưu trữ và phân phối website frontend tĩnh.
+* **Amazon EC2** chạy **RESTful API** được xây dựng bằng Node.js và Express.
+* **Amazon RDS PostgreSQL** lưu trữ dữ liệu giao dịch như người dùng, phim, suất chiếu và vé.
+* **Amazon DynamoDB** quản lý cơ chế khóa ghế tạm thời để ngăn chặn xung đột đặt vé.
+* **Amazon SES** tự động gửi email xác thực OTP và vé điện tử cho khách hàng.
+
+Điểm nổi bật của giải pháp là cơ chế **real-time seat locking** sử dụng **ConditionExpression** và **Time-to-Live (TTL)** của DynamoDB. Khi khách hàng chọn một ghế, ghế đó sẽ được khóa tạm thời trong 5 phút. Nếu quá trình thanh toán không hoàn tất trong khoảng thời gian này, DynamoDB sẽ tự động giải phóng khóa để khách hàng khác có thể đặt ghế.
+
+Thiết kế này giúp giảm đáng kể tình trạng bán trùng ghế trong khi vẫn đảm bảo hệ thống phản hồi nhanh ngay cả khi có nhiều người dùng truy cập đồng thời.
+
+---
+
+### Lợi ích kỳ vọng
+
+So với mô hình triển khai truyền thống, kiến trúc Cloud-Native mang lại nhiều lợi ích đáng kể.
+
+### Lợi ích kỹ thuật
+
+* Ngăn chặn xung đột đặt ghế trong các giao dịch đồng thời.
+* Tăng khả năng mở rộng bằng cách tách biệt frontend và backend.
+* Nâng cao độ tin cậy của hệ thống nhờ sử dụng **managed AWS services**.
+* Giảm độ phức tạp trong vận hành thông qua việc tách biệt các thành phần dịch vụ.
+* Hỗ trợ tự động gửi email xác nhận và vé điện tử.
+* Dễ dàng mở rộng thêm tính năng trong tương lai mà không cần thay đổi lớn về kiến trúc.
+
+### Lợi ích nghiệp vụ
+
+* Cải thiện trải nghiệm khách hàng trong quá trình đặt vé.
+* Tăng độ tin cậy của hệ thống và tỷ lệ giao dịch thành công.
+* Giảm khối lượng công việc thủ công của quản trị viên.
+* Nâng cao khả năng bảo trì và vận hành hệ thống.
+* Tạo nền tảng Cloud hiện đại phù hợp cho việc phát triển lâu dài.
+
+---
+
+## 3. Kiến trúc giải pháp
+
+Hệ thống HCMUT Cinema được xây dựng theo kiến trúc **Cloud-Native Architecture**, trong đó lớp giao diện, xử lý nghiệp vụ, lưu trữ dữ liệu và dịch vụ thông báo được tách thành các thành phần độc lập triển khai trên AWS.
+
+Thay vì sử dụng một máy chủ duy nhất để xử lý toàn bộ chức năng, mỗi thành phần sẽ đảm nhận một nhiệm vụ riêng trong hệ thống. Kiến trúc này giúp tăng khả năng mở rộng, đơn giản hóa việc bảo trì và cho phép từng dịch vụ phát triển độc lập.
+
+Luồng hoạt động tổng quát của hệ thống được mô tả như sau:
+
+```text
+Customer Browser
+        │
+        ▼
+ Amazon S3 Static Website
+        │
+        ▼
+ Amazon EC2 (Node.js REST API)
+        │
+ ┌──────┼───────────────┐
+ ▼      ▼               ▼
+Amazon RDS      DynamoDB      Amazon SES
+(PostgreSQL)   Seat Locks     OTP & E-Ticket
+```
+
+### Các AWS Services sử dụng
+
+<table><thead><tr><th>AWS Service</th><th>Mục đích sử dụng</th></tr></thead><tbody><tr><td>Amazon S3</td><td>Lưu trữ và phân phối website frontend cho khách hàng và quản trị viên.</td></tr><tr><td>Amazon EC2</td><td>Chạy ứng dụng backend Node.js và cung cấp RESTful APIs.</td></tr><tr><td>Amazon RDS PostgreSQL</td><td>Lưu trữ dữ liệu giao dịch lâu dài như người dùng, phim, rạp, lịch chiếu và vé.</td></tr><tr><td>Amazon DynamoDB</td><td>Quản lý khóa ghế tạm thời bằng ConditionExpression và TTL để ngăn chặn Race Condition.</td></tr><tr><td>Amazon SES</td><td>Tự động gửi email OTP xác thực và vé điện tử sau khi thanh toán thành công.</td></tr></tbody></table>
+
+### Thiết kế các thành phần
+
+#### Amazon S3
+
+Amazon S3 chịu trách nhiệm lưu trữ và phân phối ứng dụng frontend. Vì frontend chủ yếu bao gồm các tệp HTML, CSS và JavaScript, S3 là giải pháp hosting đơn giản, tin cậy, chi phí thấp và có độ sẵn sàng cao.
+
+#### Amazon EC2
+
+Amazon EC2 lưu trữ backend được phát triển bằng Node.js và Express. Backend xử lý toàn bộ logic nghiệp vụ, giao tiếp với cơ sở dữ liệu, xác thực yêu cầu từ người dùng và tương tác với các dịch vụ AWS thông qua AWS SDK.
+
+#### Amazon RDS PostgreSQL
+
+Amazon RDS lưu trữ toàn bộ dữ liệu giao dịch quan trọng yêu cầu tính nhất quán cao và tuân thủ ACID, bao gồm tài khoản người dùng, thông tin phim, phòng chiếu, lịch chiếu, đặt vé và thanh toán.
+
+#### Amazon DynamoDB
+
+DynamoDB được sử dụng để triển khai cơ chế **real-time seat locking**. Bằng cách kết hợp **ConditionExpression** với **Time-to-Live (TTL)**, hệ thống đảm bảo không có hai khách hàng nào có thể đặt cùng một ghế tại cùng một thời điểm, đồng thời tự động giải phóng các khóa đã hết hạn.
+
+#### Amazon SES
+
+Amazon Simple Email Service (SES) chịu trách nhiệm gửi email xác thực **One-Time Password (OTP)** trong quá trình thanh toán và gửi vé điện tử chứa **QR Code** sau khi đặt vé thành công.
+
+## 4. Triển khai kỹ thuật
+
+### Các giai đoạn phát triển
+
+#### Giai đoạn 1
+
+* Phân tích yêu cầu hệ thống
+* Nghiên cứu các hệ thống đặt vé rạp chiếu phim hiện có
+* Xác định phạm vi dự án
+
+#### Giai đoạn 2
+
+* Thiết kế kiến trúc AWS
+* Thiết kế cơ sở dữ liệu
+* Lập kế hoạch RESTful APIs
+
+#### Giai đoạn 3
+
+* Phát triển backend
+* Phát triển frontend
+* Tích hợp các dịch vụ AWS
+
+#### Giai đoạn 4
+
+* Kiểm thử hệ thống
+* Kiểm thử concurrency
+* Triển khai trên AWS
+* Hoàn thiện tài liệu dự án
+
+### Yêu cầu kỹ thuật
+
+Ngôn ngữ lập trình
+
+* JavaScript
+* HTML
+* CSS
+
+Framework
+
+* Node.js
+* Express.js
+
+Cơ sở dữ liệu
+
+* PostgreSQL
+* DynamoDB
+
+Nền tảng Cloud
+
+* Amazon Web Services
+
+Công cụ phát triển
+
+* AWS CLI
+* Visual Studio Code
+* GitHub
+
+---
+
+## 5. Kế hoạch thực hiện và các mốc quan trọng
+
+<table><thead><tr><th>Giai đoạn</th><th>Nội dung thực hiện</th></tr></thead><tbody><tr><td>Week 1</td><td>Nghiên cứu AWS services và yêu cầu hệ thống</td></tr><tr><td>Week 2</td><td>Thiết kế kiến trúc và cơ sở dữ liệu</td></tr><tr><td>Week 3</td><td>Triển khai backend APIs</td></tr><tr><td>Week 4</td><td>Phát triển giao diện frontend</td></tr><tr><td>Week 5</td><td>Tích hợp các AWS services</td></tr><tr><td>Week 6</td><td>Kiểm thử và sửa lỗi</td></tr><tr><td>Week 7</td><td>Triển khai và tối ưu hệ thống</td></tr><tr><td>Week 8</td><td>Hoàn thiện tài liệu và chuẩn bị trình bày</td></tr></tbody></table>
+
+---
+
+## 6. Dự toán chi phí
+
+Dự án được phát triển chủ yếu phục vụ mục đích học tập và nghiên cứu, ưu tiên sử dụng **AWS Free Tier** whenever possible.
+
+### Chi phí hạ tầng dự kiến
+
+<table><thead><tr><th>Service</th><th style="text-align:right">Chi phí dự kiến</th></tr></thead><tbody><tr><td>Amazon EC2</td><td style="text-align:right">Free Tier</td></tr><tr><td>Amazon S3</td><td style="text-align:right">Free Tier</td></tr><tr><td>Amazon RDS</td><td style="text-align:right">Free Tier</td></tr><tr><td>Amazon DynamoDB</td><td style="text-align:right">Free Tier</td></tr><tr><td>Amazon SES</td><td style="text-align:right">Chi phí gửi email tối thiểu</td></tr><tr><td>Data Transfer</td><td style="text-align:right">Free Tier</td></tr></tbody></table>
+
+Chi phí vận hành ước tính:
+
+**Khoảng 0–5 USD/tháng** tùy thuộc vào mức sử dụng thực tế.
+
+---
+
+## 7. Đánh giá rủi ro
+
+### Các rủi ro tiềm ẩn
+
+#### Đặt vé đồng thời với số lượng lớn
+
+Nhiều người dùng có thể cùng lúc đặt một ghế giống nhau.
+
+**Giải pháp**
+
+Sử dụng cơ chế ghi có điều kiện của DynamoDB kết hợp với khóa ghế bằng TTL.
+
+---
+
+#### Phát sinh chi phí AWS ngoài dự kiến
+
+Các tài nguyên có thể vẫn tiếp tục chạy sau khi kiểm thử.
+
+**Giải pháp**
+
+Xóa các tài nguyên không sử dụng và theo dõi **AWS Billing Dashboard** thường xuyên.
+
+---
+
+#### Lỗi gửi email OTP
+
+Email xác thực có thể không được gửi thành công.
+
+**Giải pháp**
+
+Thực hiện cơ chế gửi lại email và kiểm tra tính hợp lệ của địa chỉ email trước khi thanh toán.
+
+---
+
+#### Sự cố cơ sở dữ liệu
+
+Cơ sở dữ liệu có thể gặp downtime ngoài dự kiến.
+
+**Giải pháp**
+
+Duy trì cơ chế sao lưu dữ liệu định kỳ và quy trình khôi phục dữ liệu khi cần thiết.
+
+---
+
+## 8. Kết quả kỳ vọng
+
+### Kết quả kỹ thuật
+
+Sau khi hoàn thành dự án, hệ thống kỳ vọng sẽ:
+
+* Triển khai thành công trên AWS.
+* Hỗ trợ đặt vé xem phim trực tuyến.
+* Ngăn chặn việc bán trùng ghế.
+* Tự động gửi email OTP xác thực.
+* Tạo vé điện tử chứa QR Code.
+* Minh họa việc sử dụng thực tế nhiều AWS services trong một hệ thống hoàn chỉnh.
+
+### Kết quả học tập
+
+Thông qua dự án này, các thành viên trong nhóm sẽ tích lũy được kinh nghiệm về:
+
+* Triển khai ứng dụng trên AWS Cloud
+* Thiết kế kiến trúc Cloud-Native
+* Phát triển RESTful APIs
+* Thiết kế cơ sở dữ liệu
+* Khái niệm Microservices
+* Làm việc nhóm trong dự án phần mềm
+* Quy trình triển khai và vận hành ứng dụng

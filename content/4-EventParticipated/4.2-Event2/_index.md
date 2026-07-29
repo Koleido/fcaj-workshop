@@ -1,126 +1,115 @@
 ---
 title: "Event 2"
-date: 2024-01-01
-weight: 1
+date: 2026-06-13
+weight: 2
 chapter: false
 pre: " <b> 4.2. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy it verbatim** into your report, including this warning.
-{{% /notice %}}
+<!-- {{% notice warning %}}
+⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
+{{% /notice %}} -->
 
-# Summary Report: “GenAI-powered App-DB Modernization workshop”
+# Report on the “Company Meeting on 13/06/2026”
 
 ### Event Objectives
 
-- Share best practices in modern application design
-- Introduce Domain-Driven Design (DDD) and event-driven architecture
-- Provide guidance on selecting the right compute services
-- Present AI tools to support the development lifecycle
+The company meeting held on 13/06/2026 was a knowledge-sharing activity where speakers working in different fields such as AWS, AI, DevOps, data, and system development shared their real-world experiences. Through this event, I had the opportunity to gain a broader practical perspective on career orientation, cloud-based solution implementation, and the skills needed to grow in a modern technology environment.
 
-### Speakers
+### Event Information
 
-- **Jignesh Shah** – Director, Open Source Databases
-- **Erica Liu** – Sr. GTM Specialist, AppMod
-- **Fabrianne Effendi** – Assc. Specialist SA, Serverless Amazon Web Services
+- **Time:** 13/06/2026
+- **Attendance Method:** In person at the office
+- **Reference Materials:** Slide decks for each topic provided by the organizers
+
+### Speakers and Presentation Topics
+
+- **Danh Hoàng Hiếu Nghị** – *From First Cloud AI Journey to AWS Partner*  
+  AI Engineer – AWS Community Builder – AWS Student Builder Group Leader
+
+- **Đinh Trung Kiên, Nguyễn Minh Thọ** – *A scalable URL shortening service on AWS*
+
+- **Mr. Dat Pham (Data Analytics Engineer), Mr. Cường Nguyễn (Process Engineer)** – *A real-life story about culture at a multinational corporation*
+
+- **Trong H. Truong (Trương Hoàng Trọng)** – *What does a DevOps Engineer really do?*  
+  DevOps Engineer @ Endava Vietnam
 
 ### Key Highlights
 
-#### Identifying the drawbacks of legacy application architecture
+#### 1. From First Cloud AI Journey to AWS Partner
 
-- Long product release cycles → Lost revenue/missed opportunities  
-- Inefficient operations → Reduced productivity, higher costs  
-- Non-compliance with security regulations → Security breaches, loss of reputation  
+The presentation by Danh Hoàng Hiếu Nghị gave me a clearer view of the journey from being a member of First Cloud AI Journey to becoming an AWS Partner. From the sharing session, I understood that to grow further in cloud and AI, technical knowledge alone is not enough; one also needs initiative in learning, a spirit of community building, and the ability to develop sustainably in a professional environment.
 
-#### Transitioning to modern application architecture – Microservices
+The talk also helped me better understand the role of participating in learning programs, technology communities, and hands-on practice activities in the process of professional growth.
 
-Migrating to a modular system — each function is an **independent service** communicating via **events**, built on three core pillars:
+![Event 2 picture](/images/Event2/Event2-1.jpg)
 
-- **Queue Management**: Handle asynchronous tasks  
-- **Caching Strategy**: Optimize performance  
-- **Message Handling**: Flexible inter-service communication  
+#### 2. A scalable URL shortening service on AWS
 
-#### Domain-Driven Design (DDD)
+This was a highly practical topic focused on building a URL shortening service that can scale on AWS. Through this presentation, I gained a better perspective on how to design a small system while still ensuring important factors such as:
+- handling a large number of requests,
+- storing data efficiently,
+- responding quickly,
+- and scaling easily as the number of users grows.
 
-- **Four-step method**: Identify domain events → arrange timeline → identify actors → define bounded contexts  
-- **Bookstore case study**: Demonstrates real-world DDD application  
-- **Context mapping**: 7 patterns for integrating bounded contexts  
+![Event 2 picture](/images/Event2/Event2-2.jpg)
 
-#### Event-Driven Architecture
+This topic made me realize that even a seemingly simple service like URL shortening still requires clear architectural thinking if it is to be implemented effectively in the cloud.
 
-- **3 integration patterns**: Publish/Subscribe, Point-to-point, Streaming  
-- **Benefits**: Loose coupling, scalability, resilience  
-- **Sync vs async comparison**: Understanding the trade-offs  
+![Event 2 picture](/images/Event2/Event2-3.jpg)
 
-#### Compute Evolution
+#### 3. A real-life story about culture at a multinational corporation
 
-- **Shared Responsibility Model**: EC2 → ECS → Fargate → Lambda  
-- **Serverless benefits**: No server management, auto-scaling, pay-for-value  
-- **Functions vs Containers**: Criteria for appropriate choice  
+The sharing session by Dat Pham and Cường Nguyễn was very practical, not only focusing on technical work but also discussing the working environment and culture in a multinational corporation. From this content, I understood that working in technology is not only about writing code or operating systems, but also about adapting to processes, communicating effectively, and collaborating with different departments.
 
-#### Amazon Q Developer
+![Event 2 picture](/images/Event2/Event2-4.jpg)
 
-- **SDLC automation**: From planning to maintenance  
-- **Code transformation**: Java upgrade, .NET modernization  
-- **AWS Transform agents**: VMware, Mainframe, .NET migration  
+This presentation helped me realize the importance of professionalism, work attitude, and adaptability in a large corporate environment.
 
-### Key Takeaways
+![Event 2 picture](/images/Event2/Event2-5.jpg)
 
-#### Design Mindset
+#### 4. What does a DevOps Engineer really do?
 
-- **Business-first approach**: Always start from the business domain, not the technology  
-- **Ubiquitous language**: Importance of a shared vocabulary between business and tech teams  
-- **Bounded contexts**: Identifying and managing complexity in large systems  
+The sharing session by Trong H. Truong about the real role of a DevOps Engineer helped me better understand what this position actually involves in a company. Instead of viewing DevOps only as a theoretical concept, I learned that DevOps is the combination of software development and system operations, with the goal of shortening the development lifecycle, automating processes, and improving system stability.
 
-#### Technical Architecture
+![Event 2 picture](/images/Event2/Event2-6.jpg)
 
-- **Event storming technique**: Practical method for modeling business processes  
-- Use **event-driven communication** instead of synchronous calls  
-- **Integration patterns**: When to use sync, async, pub/sub, streaming  
-- **Compute spectrum**: Criteria for choosing between VM, containers, and serverless  
+From this session, I gained a more practical understanding of the tasks a DevOps Engineer usually handles, such as deployment, monitoring, automation, incident handling, and system optimization.
 
-#### Modernization Strategy
+![Event 2 picture](/images/Event2/Event2-7.jpg)
 
-- **Phased approach**: No rushing — follow a clear roadmap  
-- **7Rs framework**: Multiple modernization paths depending on the application  
-- **ROI measurement**: Cost reduction + business agility  
+### Achievements
 
-### Applying to Work
+After attending the event, I achieved the following outcomes:
 
-- **Apply DDD** to current projects: Event storming sessions with business teams  
-- **Refactor microservices**: Use bounded contexts to define service boundaries  
-- **Implement event-driven patterns**: Replace some sync calls with async messaging  
-- **Adopt serverless**: Pilot AWS Lambda for suitable use cases  
-- **Try Amazon Q Developer**: Integrate into the dev workflow to boost productivity  
+- Gained a more practical perspective on career development in the cloud and AI fields.
+- Better understood how to design a scalable AWS service.
+- Became more aware of the role of corporate culture and adaptability in a multinational working environment.
+- Gained a more realistic view of the work of a DevOps Engineer.
+- Collected complete slide materials and visual evidence for each topic discussed during the meeting.
+
+### Challenges Encountered
+
+Since the meeting covered multiple topics and some of them were highly technical, I encountered a few difficulties:
+
+- Some concepts were still quite new to me, so I could not fully understand everything during the session.
+- Each speaker had a different style and focus, so I needed time to organize the content afterward.
+- Some topics were based heavily on practical experience, which made it challenging to take complete notes while listening.
+
+However, taking photos of each topic and saving the slides allowed me to review the material later and understand it more deeply.
+
+### Lessons Learned
+
+Through this meeting, I realized that learning technology is not limited to textbooks or documentation but also comes from real-world experience and from the sharing of those who have gone before. Each topic gave me a different perspective: from system architecture, cloud, and DevOps to corporate culture and career development paths.
+
+I also understood that to absorb information more effectively in future meetings, I need to prepare the relevant foundational knowledge in advance and actively organize the content after each event.
 
 ### Event Experience
 
-Attending the **“GenAI-powered App-DB Modernization”** workshop was extremely valuable, giving me a comprehensive view of modernizing applications and databases using advanced methods and tools. Key experiences included:
+Compared with the first meeting I attended, I was more proactive this time in recording the content and taking evidence photos for each topic. This made it easier for me to compile the report after the session.
 
-#### Learning from highly skilled speakers
-- Experts from AWS and major tech organizations shared **best practices** in modern application design.  
-- Through real-world case studies, I gained a deeper understanding of applying **DDD** and **Event-Driven Architecture** to large projects.  
+The event atmosphere was highly professional yet open and friendly, allowing me to feel more clearly the dynamism of the learning and working community in the technology field. Although I could not fully grasp every technical detail during the first listening, I still found this to be a very valuable experience because it broadened my perspective and helped me better understand my own career direction.
 
-#### Hands-on technical exposure
-- Participating in **event storming** sessions helped me visualize how to **model business processes** into domain events.  
-- Learned how to **split microservices** and define **bounded contexts** to manage large-system complexity.  
-- Understood trade-offs between **synchronous and asynchronous communication** and integration patterns like **pub/sub, point-to-point, streaming**.  
+### Conclusion
 
-#### Leveraging modern tools
-- Explored **Amazon Q Developer**, an AI tool for SDLC support from planning to maintenance.  
-- Learned to **automate code transformation** and pilot serverless with **AWS Lambda** to improve productivity.  
-
-#### Networking and discussions
-- The workshop offered opportunities to exchange ideas with experts, peers, and business teams, enhancing the **ubiquitous language** between business and tech.  
-- Real-world examples reinforced the importance of the **business-first approach** rather than focusing solely on technology.  
-
-#### Lessons learned
-- Applying DDD and event-driven patterns reduces **coupling** while improving **scalability** and **resilience**.  
-- Modernization requires a **phased approach** with **ROI measurement**; rushing the process can be risky.  
-- AI tools like Amazon Q Developer can significantly **boost productivity** when integrated into the current workflow.  
-
-#### Some event photos
-*Add your event photos here*  
-
-> Overall, the event not only provided technical knowledge but also helped me reshape my thinking about application design, system modernization, and cross-team collaboration.
+> Overall, the meeting on 13/06/2026 provided me with many practical insights and helped me better understand cloud, DevOps, system architecture, and corporate working culture. It was an important source of motivation for me to continue learning and improving myself in the next stages.

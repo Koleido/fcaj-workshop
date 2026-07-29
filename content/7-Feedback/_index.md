@@ -1,47 +1,131 @@
 ---
 title: "Sharing and Feedback"
-date: 2024-01-01
+date: 2026-07-20
 weight: 7
 chapter: false
 pre: " <b> 7. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
+<!-- {{% notice warning %}}
+⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report.
+{{% /notice %}} -->
 
-> Here, you can freely share your personal opinions about your experience participating in the First Cloud AI Journey program. This will help the FCAJ team improve any shortcomings based on the following aspects:
+Participating in the **First Cloud AI Journey** program has been a valuable learning experience for me. As a Computer Science student with limited experience in cloud computing, I had the opportunity to explore AWS technologies, participate in technical sharing sessions, and apply cloud services through a practical team project.
 
-### Overall Evaluation
-
-**1. Working Environment**  
-The working environment is very friendly and open. FCAJ members are always willing to help whenever I encounter difficulties, even outside working hours. The workspace is tidy and comfortable, helping me focus better. However, I think it would be nice to have more social gatherings or team bonding activities to strengthen relationships.
-
-**2. Support from Mentor / Team Admin**  
-The mentor provides very detailed guidance, explains clearly when I don’t understand, and always encourages me to ask questions. The admin team supports administrative tasks, provides necessary documents, and creates favorable conditions for me to work effectively. I especially appreciate that the mentor allows me to try and solve problems myself instead of just giving the answer.
-
-**3. Relevance of Work to Academic Major**  
-The tasks I was assigned align well with the knowledge I learned at university, while also introducing me to new areas I had never encountered before. This allowed me to both strengthen my foundational knowledge and gain practical skills.
-
-**4. Learning & Skill Development Opportunities**  
-During the internship, I learned many new skills such as using project management tools, teamwork skills, and professional communication in a corporate environment. The mentor also shared valuable real-world experiences that helped me better plan my career path.
-
-**5. Company Culture & Team Spirit**  
-The company culture is very positive: everyone respects each other, works seriously but still keeps things enjoyable. When there are urgent projects, everyone works together and supports one another regardless of their position. This made me feel like a real part of the team, even as an intern.
-
-**6. Internship Policies / Benefits**  
-The company provides an internship allowance and offers flexible working hours when needed. In addition, having the opportunity to join internal training sessions is a big plus.
+Throughout the internship, I not only learned new technical knowledge but also gained a better understanding of teamwork, technical documentation, and real-world software development processes.
 
 ---
 
-### Additional Questions
-- What did you find **most satisfying** during your internship?  
-- What do you think the company **should improve** for future interns?  
-- If recommending to a friend, would you **suggest they intern here**? Why or why not?  
+## Overall Evaluation
+
+### 1. Learning Environment
+
+The learning environment was professional, friendly, and highly supportive. The program provided a good balance between theoretical knowledge and practical experience, allowing participants to gradually become familiar with cloud technologies.
+
+The technical sharing sessions and enterprise meetings also helped broaden my understanding of the IT industry beyond classroom knowledge.
 
 ---
 
-### Suggestions & Expectations
-- Do you have any suggestions to improve the internship experience?  
-- Would you like to continue this program in the future?  
-- Any other comments (free sharing):
+### 2. Support from Mentors and Organizers
+
+The mentors and organizers were always enthusiastic in answering questions and providing useful learning resources whenever participants encountered difficulties.
+
+The announcements, schedules, and learning materials were delivered clearly, making it easy to follow the internship progress.
+
+---
+
+### 3. Learning Experience
+
+Although I had very little experience with AWS before joining the program, I was able to gradually understand many important AWS services such as:
+
+- Amazon EC2
+- Amazon S3
+- Amazon RDS
+- Amazon DynamoDB
+- Amazon SES
+- AWS CLI
+
+Besides technical knowledge, I also learned how to build technical documentation using Hugo, prepare bilingual reports, and participate in a cloud-native software project.
+
+---
+
+### 4. Enterprise Meetings
+
+The enterprise meetings were one of the most valuable parts of the program.
+
+Listening to engineers and industry experts share their real-world experiences helped me understand how cloud technologies are applied in professional environments. The sessions about Cloud Computing, DevOps, AI, System Architecture, and career development gave me a clearer picture of the skills required in the software industry.
+
+---
+
+### 5. Teamwork Experience
+
+Working with teammates on the HCMUT Cinema project allowed me to improve my communication and collaboration skills.
+
+Although everyone had different responsibilities, we were able to discuss technical issues together, divide tasks effectively, and support one another throughout the project.
+
+---
+
+### 6. Overall Satisfaction
+
+Overall, I am satisfied with the internship program.
+
+The combination of technical training, practical projects, and enterprise sharing sessions created a meaningful learning experience and helped me become more confident in pursuing cloud computing in the future.
+
+---
+
+## Additional Questions
+
+#### What was the most satisfying part of the internship?
+
+The most satisfying part was having the opportunity to participate in a real AWS-based project while learning from experienced engineers through enterprise meetings.
+
+This combination of theory and practical implementation significantly improved my understanding of cloud computing.
+
+---
+
+#### What should be improved?
+
+I believe the program could include more hands-on laboratory sessions and guided workshops for beginners.
+
+Additional practice opportunities would help participants understand AWS services more deeply and build confidence before working on larger projects.
+
+---
+
+#### Would you recommend this program to your friends?
+
+Yes.
+
+I would definitely recommend the First Cloud AI Journey program to other students who are interested in Cloud Computing or Software Engineering.
+
+The program provides valuable technical knowledge, practical experience, and opportunities to connect with experienced professionals.
+
+---
+
+## Suggestions & Future Expectations
+
+#### Suggestions
+
+Some suggestions that could further improve the program include:
+
+- Organize more hands-on AWS labs.
+- Increase technical practice sessions after theoretical lectures.
+- Provide more real-world project examples.
+- Continue inviting engineers from different companies to share practical experiences.
+
+---
+
+#### Future Expectations
+
+If possible, I would be very interested in joining future AWS learning programs or advanced cloud training courses.
+
+I also hope to continue improving my cloud computing skills and eventually pursue a professional career in this field.
+
+---
+
+## Final Thoughts
+
+The First Cloud AI Journey internship has been an important milestone in my learning journey.
+
+Besides gaining technical knowledge about AWS services, I also learned how to work collaboratively, document technical projects, and continuously improve through practical experience.
+
+I sincerely appreciate all the mentors, speakers, and organizers for creating such a meaningful learning opportunity.

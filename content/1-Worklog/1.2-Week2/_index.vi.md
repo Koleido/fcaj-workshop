@@ -1,59 +1,67 @@
 ---
-title: "Worklog Tuần 2"
-date: 2024-01-01
-weight: 1
+title: "Nhật ký công việc Tuần 2"
+date: 2026-06-15
+weight: 2
 chapter: false
 pre: " <b> 1.2. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
 
+### Mục tiêu tuần 2
 
-### Mục tiêu tuần 2:
+* Tiếp tục tìm hiểu AWS thông qua các bài thực hành có hướng dẫn.
+* Làm quen với các dịch vụ AWS cốt lõi.
+* Nâng cao khả năng sử dụng AWS Management Console và AWS Skill Builder.
 
-* Kết nối, làm quen với các thành viên trong First Cloud AI Journey.
-* Hiểu dịch vụ AWS cơ bản, cách dùng console & CLI.
+---
 
-### Các công việc cần triển khai trong tuần này:
-| Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCAJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### Công việc thực hiện trong tuần
 
+| Ngày | Công việc | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
+| --- | ---- | ---------- | --------------- | ------------------ |
+| 1 | - Ôn tập các kiến thức AWS đã học ở Tuần 1 <br> - Khám phá lộ trình học AWS Explore | 15/06/2026 | 15/06/2026 | https://explore.skillbuilder.aws |
+| 2 | - Hoàn thành bài thực hành **Launch an Instance using Amazon EC2** <br> - Ôn lại cách triển khai và cấu hình EC2 | 16/06/2026 | 16/06/2026 | AWS Skill Builder |
+| 3 | - Hoàn thành bài thực hành **Create an Aurora or Amazon RDS Database** <br> - Tìm hiểu cách triển khai cơ sở dữ liệu quan hệ trên AWS | 17/06/2026 | 17/06/2026 | AWS Skill Builder |
+| 4 | - Hoàn thành bài thực hành **Create a Web App using AWS Lambda** <br> - Tìm hiểu mô hình Serverless cơ bản | 18/06/2026 | 18/06/2026 | AWS Skill Builder |
+| 5 | - Hoàn thành bài thực hành **Set Up a Cost Budget using AWS Budgets** <br> - Tìm hiểu cách theo dõi chi phí và thiết lập ngân sách AWS | 19/06/2026 | 19/06/2026 | AWS Skill Builder |
+| 6 | - Thực hiện bài **Use a Foundation Model in Amazon Bedrock** <br> - Khắc phục lỗi truy cập dịch vụ <br> - Liên hệ ban tổ chức để được hỗ trợ | 20/06/2026 | Đang thực hiện | AWS Skill Builder |
 
-### Kết quả đạt được tuần 2:
+---
 
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+### Kết quả đạt được
 
-* Đã tạo và cấu hình AWS Free Tier account thành công.
+* Hoàn thành **4/5** bài thực hành trong chương trình AWS Explore.
 
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
+* Có kinh nghiệm thực hành với các dịch vụ:
+  * Amazon EC2
+  * Amazon RDS
+  * AWS Lambda
+  * AWS Budgets
 
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
+* Nâng cao hiểu biết về:
+  * AWS Management Console
+  * Triển khai tài nguyên Cloud cơ bản
+  * Quản lý chi phí trên AWS
 
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
+* Làm quen với quy trình thực hiện các bài lab trên AWS Skill Builder.
 
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
+* Hiểu thêm về cách xử lý các vấn đề liên quan đến quyền truy cập dịch vụ và cấu hình tài khoản AWS.
 
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
+---
 
+### Khó khăn gặp phải
 
+* Không thể hoàn thành bài thực hành Amazon Bedrock do gặp vấn đề về quyền truy cập dịch vụ.
+
+* Đã liên hệ ban tổ chức để được hỗ trợ nhưng sự cố vẫn chưa được khắc phục trong thời gian thực tập.
+
+* Nhận thấy việc sử dụng một số dịch vụ AWS còn phụ thuộc vào quyền của tài khoản và khu vực (Region) được hỗ trợ.
+
+---
+
+### Kế hoạch tuần tiếp theo
+
+* Bắt đầu nghiên cứu kiến trúc Cloud-Native.
+
+* Tìm hiểu các dịch vụ AWS có thể áp dụng cho dự án HCMUT Cinema.
+
+* Tiếp tục củng cố kiến thức AWS thông qua việc nghiên cứu và chuẩn bị cho dự án.

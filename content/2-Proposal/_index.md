@@ -1,115 +1,323 @@
 ---
 title: "Proposal"
-date: 2024-01-01
+date: 2026-06-20
 weight: 2
 chapter: false
 pre: " <b> 2. </b> "
----
-{{% notice warning %}}
+--------------------
+
+<!-- {{% notice warning %}}
 ⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
+{{% /notice %}} -->
 
-In this section, you need to summarize the contents of the workshop that you **plan** to conduct.
+# HCMUT Cinema
+# A Cloud-Native Cinema Booking System on Amazon Web Services
 
-# IoT Weather Platform for Lab Research
-## A Unified AWS Serverless Solution for Real-Time Weather Monitoring
+## 1. Executive Summary
 
-### 1. Executive Summary
-The IoT Weather Platform is designed for the ITea Lab team in Ho Chi Minh City to enhance weather data collection and analysis. It supports up to 5 weather stations, with potential scalability to 10-15, utilizing Raspberry Pi edge devices with ESP32 sensors to transmit data via MQTT. The platform leverages AWS Serverless services to deliver real-time monitoring, predictive analytics, and cost efficiency, with access restricted to 5 lab members via Amazon Cognito.
+The **HCMUT Cinema** project is a cloud-native cinema management and ticket booking system developed on **Amazon Web Services (AWS)**. The project aims to redesign a traditional monolithic cinema booking application into a modern cloud-native architecture by separating the frontend and backend, utilizing managed AWS services, and applying best practices for scalability, reliability, and maintainability.
 
-### 2. Problem Statement
-### What’s the Problem?
-Current weather stations require manual data collection, becoming unmanageable with multiple units. There is no centralized system for real-time data or analytics, and third-party platforms are costly and overly complex.
+One of the primary objectives of this project is to solve the real-world challenges commonly found in online ticket booking systems, especially **high concurrent access** and **seat booking conflicts (Race Condition)** during peak hours. To address these issues, the project combines multiple AWS services including **Amazon EC2**, **Amazon S3**, **Amazon RDS PostgreSQL**, **Amazon DynamoDB**, and **Amazon Simple Email Service (SES)**.
 
-### The Solution
-The platform uses AWS IoT Core to ingest MQTT data, AWS Lambda and API Gateway for processing, Amazon S3 for storage (including a data lake), and AWS Glue Crawlers and ETL jobs to extract, transform, and load data from the S3 data lake to another S3 bucket for analysis. AWS Amplify with Next.js provides the web interface, and Amazon Cognito ensures secure access. Similar to Thingsboard and CoreIoT, users can register new devices and manage connections, though this platform operates on a smaller scale and is designed for private use. Key features include real-time dashboards, trend analysis, and low operational costs.
+The system provides two major subsystems:
 
-### Benefits and Return on Investment
-The solution establishes a foundational resource for lab members to develop a larger IoT platform, serving as a study resource, and provides a data foundation for AI enthusiasts for model training or analysis. It reduces manual reporting for each station via a centralized platform, simplifying management and maintenance, and improves data reliability. Monthly costs are $0.66 USD per the AWS Pricing Calculator, with a 12-month total of $7.92 USD. All IoT equipment costs are covered by the existing weather station setup, eliminating additional development expenses. The break-even period of 6-12 months is achieved through significant time savings from reduced manual work.
+- **Customer Portal**
+  - Browse movies and showtimes.
+  - Select seats with real-time seat locking.
+  - Purchase tickets using email OTP verification.
+  - Receive electronic tickets with QR Codes.
 
-### 3. Solution Architecture
-The platform employs a serverless AWS architecture to manage data from 5 Raspberry Pi-based stations, scalable to 15. Data is ingested via AWS IoT Core, stored in an S3 data lake, and processed by AWS Glue Crawlers and ETL jobs to transform and load it into another S3 bucket for analysis. Lambda and API Gateway handle additional processing, while Amplify with Next.js hosts the dashboard, secured by Cognito. The architecture is detailed below:
+- **Administrator Portal**
+  - Manage movies, cinemas, showtimes, and schedules.
+  - Prevent schedule conflicts automatically.
+  - Monitor ticket sales and occupancy statistics.
+  - Manage customer information and cinema operations.
 
-![IoT Weather Station Architecture](/images/2-Proposal/edge_architecture.jpeg)
+By deploying the system on AWS, the project demonstrates how cloud-native technologies can improve system performance, scalability, and user experience while reducing operational complexity.
 
-![IoT Weather Platform Architecture](/images/2-Proposal/platform_architecture.jpeg)
+---
+
+## 2. Problem Statement
+
+### Current Challenges
+
+Traditional cinema management systems are commonly deployed using a monolithic architecture where all components—including the frontend, backend, and database—are tightly coupled within a single application. Although this architecture is relatively simple to develop initially, it becomes increasingly difficult to maintain and scale as the number of users grows.
+
+One of the most significant challenges faced by online cinema booking systems is handling **high concurrent requests**. During peak periods, multiple customers may attempt to purchase the same seat simultaneously. Without an appropriate synchronization mechanism, this situation can lead to **Race Conditions**, causing duplicate bookings or inconsistent ticket information.
+
+In addition, traditional systems often encounter several other limitations:
+
+- Limited scalability during periods of high traffic.
+- Tight coupling between frontend and backend components.
+- Slow response time when processing large numbers of booking requests.
+- Manual ticket confirmation and email notification processes.
+- Difficulty maintaining data consistency across different services.
+- Limited flexibility for future feature expansion.
+
+These issues negatively impact customer experience and increase operational complexity for administrators.
+
+---
+
+### Proposed Solution
+
+To overcome these challenges, this project proposes a **Cloud-Native Cinema Booking System** built entirely on Amazon Web Services.
+
+Instead of deploying the entire application on a single server, the system adopts a **decoupled architecture**, separating frontend and backend components to improve maintainability and scalability.
+
+The solution consists of several AWS managed services working together:
+
+- **Amazon S3** hosts the static frontend website.
+- **Amazon EC2** runs the backend RESTful API built with Node.js and Express.
+- **Amazon RDS PostgreSQL** stores transactional data such as users, movies, showtimes, and tickets.
+- **Amazon DynamoDB** manages temporary seat locking to prevent booking conflicts.
+- **Amazon SES** automatically sends OTP verification emails and electronic tickets.
+
+A key feature of the proposed solution is the implementation of **real-time seat locking** using DynamoDB's **ConditionExpression** and **Time-to-Live (TTL)** mechanism. When a customer selects a seat, the seat is temporarily locked for five minutes. If the booking process is not completed within the specified period, DynamoDB automatically releases the lock, allowing other customers to reserve the seat.
+
+This design significantly reduces booking conflicts while maintaining high system responsiveness during concurrent access.
+
+---
+
+### Expected Benefits
+
+Compared with traditional deployment models, the proposed cloud-native architecture provides several advantages.
+
+### Technical Benefits
+
+- Prevent seat booking conflicts during concurrent transactions.
+- Improve application scalability by separating frontend and backend services.
+- Increase system reliability using managed AWS services.
+- Reduce operational complexity through service decoupling.
+- Support automatic email notifications and electronic ticket delivery.
+- Enable future expansion without major architectural changes.
+
+### Business Benefits
+
+- Improve customer experience during ticket booking.
+- Increase booking reliability and transaction success rate.
+- Reduce administrative workload through automation.
+- Improve overall system maintainability.
+- Provide a modern cloud-based platform suitable for future development.
+
+---
+
+## 3. Solution Architecture
+
+The HCMUT Cinema system follows a **Cloud-Native Architecture** that separates presentation, business logic, data storage, and notification services into independent components deployed on AWS.
+
+Instead of relying on a single server to perform every task, each component is responsible for a specific function within the overall system. This architecture improves scalability, simplifies maintenance, and allows each service to evolve independently.
+
+The overall workflow of the system is illustrated below.
+
+<!-- > *(Insert the architecture diagram here.)* -->
+
+```text
+Customer Browser
+        │
+        ▼
+ Amazon S3 Static Website
+        │
+        ▼
+ Amazon EC2 (Node.js REST API)
+        │
+ ┌──────┼───────────────┐
+ ▼      ▼               ▼
+Amazon RDS      DynamoDB      Amazon SES
+(PostgreSQL)   Seat Locks     OTP & E-Ticket
+```
 
 ### AWS Services Used
-- **AWS IoT Core**: Ingests MQTT data from 5 stations, scalable to 15.
-- **AWS Lambda**: Processes data and triggers Glue jobs (two functions).
-- **Amazon API Gateway**: Facilitates web app communication.
-- **Amazon S3**: Stores raw data in a data lake and processed outputs (two buckets).
-- **AWS Glue**: Crawlers catalog data, and ETL jobs transform and load it.
-- **AWS Amplify**: Hosts the Next.js web interface.
-- **Amazon Cognito**: Secures access for lab users.
+
+| AWS Service | Purpose |
+|-------------|---------|
+| Amazon S3 | Hosts the static frontend website for customers and administrators. |
+| Amazon EC2 | Runs the Node.js backend application and exposes RESTful APIs. |
+| Amazon RDS PostgreSQL | Stores persistent transactional data including users, movies, cinemas, schedules, and tickets. |
+| Amazon DynamoDB | Handles temporary seat locking using ConditionExpression and TTL to prevent race conditions. |
+| Amazon SES | Sends OTP verification emails and electronic tickets automatically after successful payment. |
 
 ### Component Design
-- **Edge Devices**: Raspberry Pi collects and filters sensor data, sending it to IoT Core.
-- **Data Ingestion**: AWS IoT Core receives MQTT messages from the edge devices.
-- **Data Storage**: Raw data is stored in an S3 data lake; processed data is stored in another S3 bucket.
-- **Data Processing**: AWS Glue Crawlers catalog the data, and ETL jobs transform it for analysis.
-- **Web Interface**: AWS Amplify hosts a Next.js app for real-time dashboards and analytics.
-- **User Management**: Amazon Cognito manages user access, allowing up to 5 active accounts.
 
-### 4. Technical Implementation
-**Implementation Phases**
-This project has two parts—setting up weather edge stations and building the weather platform—each following 4 phases:
-- Build Theory and Draw Architecture: Research Raspberry Pi setup with ESP32 sensors and design the AWS serverless architecture (1 month pre-internship)
-- Calculate Price and Check Practicality: Use AWS Pricing Calculator to estimate costs and adjust if needed (Month 1).
-- Fix Architecture for Cost or Solution Fit: Tweak the design (e.g., optimize Lambda with Next.js) to stay cost-effective and usable (Month 2).
-- Develop, Test, and Deploy: Code the Raspberry Pi setup, AWS services with CDK/SDK, and Next.js app, then test and release to production (Months 2-3).
+#### Amazon S3
 
-**Technical Requirements**
-- Weather Edge Station: Sensors (temperature, humidity, rainfall, wind speed), a microcontroller (ESP32), and a Raspberry Pi as the edge device. Raspberry Pi runs Raspbian, handles Docker for filtering, and sends 1 MB/day per station via MQTT over Wi-Fi.
-- Weather Platform: Practical knowledge of AWS Amplify (hosting Next.js), Lambda (minimal use due to Next.js), AWS Glue (ETL), S3 (two buckets), IoT Core (gateway and rules), and Cognito (5 users). Use AWS CDK/SDK to code interactions (e.g., IoT Core rules to S3). Next.js reduces Lambda workload for the fullstack web app.
+Amazon S3 is responsible for hosting the frontend application. Since the frontend consists primarily of HTML, CSS, and JavaScript files, S3 provides a simple, reliable, and cost-effective hosting solution with high availability.
 
-### 5. Timeline & Milestones
-**Project Timeline**
-- Pre-Internship (Month 0): 1 month for planning and old station review.
-- Internship (Months 1-3): 3 months.
-    - Month 1: Study AWS and upgrade hardware.
-    - Month 2: Design and adjust architecture.
-    - Month 3: Implement, test, and launch.
-- Post-Launch: Up to 1 year for research.
+#### Amazon EC2
 
-### 6. Budget Estimation
-You can find the budget estimation on the [AWS Pricing Calculator](https://calculator.aws/#/estimate?id=621f38b12a1ef026842ba2ddfe46ff936ed4ab01).  
-Or you can download the [Budget Estimation File](../attachments/budget_estimation.pdf).
+Amazon EC2 hosts the backend server developed using Node.js and Express. The backend processes all business logic, communicates with databases, validates user requests, and interacts with other AWS services through the AWS SDK.
 
-### Infrastructure Costs
-- AWS Services:
-    - AWS Lambda: $0.00/month (1,000 requests, 512 MB storage).
-    - S3 Standard: $0.15/month (6 GB, 2,100 requests, 1 GB scanned).
-    - Data Transfer: $0.02/month (1 GB inbound, 1 GB outbound).
-    - AWS Amplify: $0.35/month (256 MB, 500 ms requests).
-    - Amazon API Gateway: $0.01/month (2,000 requests).
-    - AWS Glue ETL Jobs: $0.02/month (2 DPUs).
-    - AWS Glue Crawlers: $0.07/month (1 crawler).
-    - MQTT (IoT Core): $0.08/month (5 devices, 45,000 messages).
+#### Amazon RDS PostgreSQL
 
-Total: $0.7/month, $8.40/12 months
+Amazon RDS stores all critical transactional data that requires strong consistency and ACID compliance, including user accounts, movie information, cinema rooms, showtimes, bookings, and payment records.
 
-- Hardware: $265 one-time (Raspberry Pi 5 and sensors).
+#### Amazon DynamoDB
 
-### 7. Risk Assessment
-#### Risk Matrix
-- Network Outages: Medium impact, medium probability.
-- Sensor Failures: High impact, low probability.
-- Cost Overruns: Medium impact, low probability.
+DynamoDB is dedicated to implementing the real-time seat locking mechanism. By combining **ConditionExpression** with **Time-to-Live (TTL)**, the system ensures that no two customers can reserve the same seat simultaneously while automatically releasing expired locks.
 
-#### Mitigation Strategies
-- Network: Local storage on Raspberry Pi with Docker.
-- Sensors: Regular checks and spares.
-- Cost: AWS budget alerts and optimization.
+#### Amazon SES
 
-#### Contingency Plans
-- Revert to manual methods if AWS fails.
-- Use CloudFormation for cost-related rollbacks.
+Amazon Simple Email Service (SES) is responsible for sending One-Time Password (OTP) verification emails during the payment process as well as delivering electronic tickets containing QR Codes after successful booking.
 
-### 8. Expected Outcomes
-#### Technical Improvements: 
-Real-time data and analytics replace manual processes.  
-Scalable to 10-15 stations.
-#### Long-term Value
-1-year data foundation for AI research.  
-Reusable for future projects.
+## 4. Technical Implementation
+
+### Development Phases
+
+#### Phase 1
+
+- Requirement analysis
+- Research existing cinema booking systems
+- Define project scope
+
+#### Phase 2
+
+- Design AWS architecture
+- Database schema design
+- REST API planning
+
+#### Phase 3
+
+- Backend development
+- Frontend development
+- AWS service integration
+
+#### Phase 4
+
+- System testing
+- Concurrency testing
+- Deployment on AWS
+- Documentation
+
+### Technical Requirements
+
+Programming Languages
+
+- JavaScript
+- HTML
+- CSS
+
+Framework
+
+- Node.js
+- Express.js
+
+Database
+
+- PostgreSQL
+- DynamoDB
+
+Cloud Platform
+
+- Amazon Web Services
+
+Development Tools
+
+- AWS CLI
+- Visual Studio Code
+- GitHub
+
+---
+
+## 5. Timeline & Milestones
+
+| Phase | Description |
+|--------|-------------|
+| Week 1 | Research AWS services and system requirements |
+| Week 2 | Design architecture and database |
+| Week 3 | Implement backend APIs |
+| Week 4 | Develop frontend interface |
+| Week 5 | Integrate AWS services |
+| Week 6 | Testing and debugging |
+| Week 7 | Deployment and optimization |
+| Week 8 | Documentation and presentation |
+
+---
+
+## 6. Budget Estimation
+
+The project is developed mainly for educational purposes using AWS Free Tier whenever possible.
+
+### Estimated Infrastructure Cost
+
+| Service | Estimated Cost |
+|----------|---------------:|
+| Amazon EC2 | Free Tier |
+| Amazon S3 | Free Tier |
+| Amazon RDS | Free Tier |
+| Amazon DynamoDB | Free Tier |
+| Amazon SES | Minimal email cost |
+| Data Transfer | Free Tier |
+
+Estimated monthly cost:
+
+**Approximately USD 0–5** depending on actual usage.
+
+---
+
+## 7. Risk Assessment
+
+### Potential Risks
+
+#### High Concurrent Booking
+
+Multiple users may attempt to reserve the same seat simultaneously.
+
+**Solution**
+
+Use DynamoDB conditional writes with TTL-based locking.
+
+---
+
+#### Unexpected AWS Costs
+
+Resources may continue running after testing.
+
+**Solution**
+
+Delete unused resources and monitor AWS Billing Dashboard.
+
+---
+
+#### Email Delivery Failure
+
+OTP emails may not be delivered successfully.
+
+**Solution**
+
+Retry sending emails and validate email addresses before payment.
+
+---
+
+#### Database Failure
+
+Unexpected database downtime.
+
+**Solution**
+
+Maintain regular database backups and recovery procedures.
+
+---
+
+## 8. Expected Outcomes
+
+### Technical Outcomes
+
+After completing the project, the system is expected to:
+
+- Successfully deploy on AWS.
+- Support online movie ticket booking.
+- Prevent duplicate seat reservations.
+- Automatically send OTP verification emails.
+- Generate QR-code electronic tickets.
+- Demonstrate practical usage of multiple AWS services.
+
+### Learning Outcomes
+
+Through this project, team members will gain experience in:
+
+- AWS Cloud deployment
+- Cloud-native application architecture
+- RESTful API development
+- Database design
+- Microservices concepts
+- Team collaboration
+- Software deployment workflow

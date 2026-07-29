@@ -1,57 +1,67 @@
 ---
 title: "Week 2 Worklog"
-date: 2024-01-01
-weight: 1
+date: 2026-06-15
+weight: 2
 chapter: false
 pre: " <b> 1.2. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
 
+### Week 2 Objectives
 
-### Week 2 Objectives:
+* Continue exploring AWS through guided hands-on activities.
+* Gain practical experience with core AWS services.
+* Improve familiarity with the AWS Management Console and AWS Skill Builder.
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+---
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+### Tasks Carried Out This Week
 
+| Day | Task | Start Date | Completion Date | Reference Material |
+| --- | ---- | ---------- | --------------- | ------------------ |
+| 1 | - Review AWS fundamentals learned in Week 1 <br> - Explore the AWS Explore learning path | 15/06/2026 | 15/06/2026 | https://explore.skillbuilder.aws |
+| 2 | - Complete **Launch an Instance using Amazon EC2** <br> - Review EC2 deployment and configuration | 16/06/2026 | 16/06/2026 | AWS Skill Builder |
+| 3 | - Complete **Create an Aurora or Amazon RDS Database** <br> - Learn relational database deployment on AWS | 17/06/2026 | 17/06/2026 | AWS Skill Builder |
+| 4 | - Complete **Create a Web App using AWS Lambda** <br> - Explore basic serverless application deployment | 18/06/2026 | 18/06/2026 | AWS Skill Builder |
+| 5 | - Complete **Set Up a Cost Budget using AWS Budgets** <br> - Learn AWS cost monitoring and budget management | 19/06/2026 | 19/06/2026 | AWS Skill Builder |
+| 6 | - Attempt **Use a Foundation Model in Amazon Bedrock** <br> - Troubleshoot service access issues <br> - Contact the organizers for technical support | 20/06/2026 | In Progress | AWS Skill Builder |
 
-### Week 2 Achievements:
+---
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+### Week 2 Achievements
 
-* Successfully created and configured an AWS Free Tier account.
+* Successfully completed **4 out of 5** AWS Explore activities.
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+* Gained hands-on experience with:
+  * Amazon EC2
+  * Amazon RDS
+  * AWS Lambda
+  * AWS Budgets
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
+* Improved understanding of:
+  * AWS Management Console
+  * Basic cloud resource deployment
+  * AWS billing and budget monitoring
 
-* Used AWS CLI to perform basic operations such as:
+* Became familiar with the workflow of AWS Skill Builder hands-on labs.
 
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
+* Learned how to troubleshoot AWS service access and account permission issues.
 
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+---
+
+### Challenges
+
+* The Amazon Bedrock activity could not be completed because of service access limitations.
+
+* Contacted the organizers for support, but the issue remained unresolved during the internship period.
+
+* Recognized the importance of AWS account permissions and regional service availability.
+
+---
+
+### Plan for Next Week
+
+* Begin researching cloud-native application architecture.
+
+* Explore AWS services that may be used in the HCMUT Cinema project.
+
+* Continue improving practical AWS knowledge through project research.

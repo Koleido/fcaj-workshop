@@ -1,33 +1,24 @@
 ---
-title: "Workshop"
-date: 2024-01-01
+title: "Hướng dẫn Triển khai (Workshop)"
+date: 2024-07-23
 weight: 5
 chapter: false
 pre: " <b> 5. </b> "
 ---
 
-{{% notice warning %}}
-⚠️ **Lưu ý:** Các thông tin dưới đây chỉ nhằm mục đích tham khảo, vui lòng **không sao chép nguyên văn** cho bài báo cáo của bạn kể cả warning này.
-{{% /notice %}}
+# Hướng dẫn Triển khai Hệ thống HCMUT Cinema trên AWS
 
+Chào mừng bạn đến với phần hướng dẫn triển khai thực tế (Workshop). Trong phần này, chúng ta sẽ từng bước đưa hệ thống **HCMUT Cinema** từ máy tính cá nhân (Localhost) lên nền tảng đám mây AWS một cách hoàn chỉnh.
 
-# Đảm bảo truy cập Hybrid an toàn đến S3 bằng cách sử dụng VPC endpoint
+Quá trình triển khai sẽ mô phỏng lại một môi trường Production thực tế với đầy đủ các yếu tố: Mạng ảo riêng tư (VPC), Máy chủ ảo (EC2), Lưu trữ tĩnh (S3), Cơ sở dữ liệu (RDS, DynamoDB) và Dịch vụ gửi Email tự động (SES).
 
-#### Tổng quan
+### Nội dung các phần:
 
-**AWS PrivateLink** cung cấp kết nối riêng tư đến các dịch vụ aws từ VPCs hoặc trung tâm dữ liệu (on-premise) mà không làm lộ lưu lượng truy cập ra ngoài public internet.
+1. [Tổng quan Kiến trúc Hệ thống](5.1-Architecture-Overview/)
+2. [Triển khai Backend (Amazon EC2)](5.2-Deploy-EC2-Backend/)
+3. [Triển khai Frontend (Amazon S3)](5.3-Deploy-S3-Frontend/)
+4. [Thiết lập Database (Amazon RDS & DynamoDB)](5.4-Database-RDS-DynamoDB/)
+5. [Tích hợp Gửi Email (Amazon SES)](5.5-Integrate-SES/)
 
-Trong bài lab này, chúng ta sẽ học cách tạo, cấu hình, và kiểm tra VPC endpoints để cho phép workload của bạn tiếp cận các dịch vụ AWS mà không cần đi qua Internet công cộng.
-
-Chúng ta sẽ tạo hai loại endpoints để truy cập đến Amazon S3: gateway vpc endpoint và interface vpc endpoint. Hai loại vpc endpoints này mang đến nhiều lợi ích tùy thuộc vào việc bạn truy cập đến S3 từ môi trường cloud hay từ trung tâm dữ liệu (on-premise).
-+ **Gateway** - Tạo gateway endpoint để gửi lưu lượng đến Amazon S3 hoặc DynamoDB using private IP addresses. Bạn điều hướng lưu lượng từ VPC của bạn đến gateway endpoint bằng các bảng định tuyến (route tables)
-+ **Interface** - Tạo interface endpoint để gửi lưu lượng đến các dịch vụ điểm cuối (endpoints) sử dụng Network Load Balancer để phân phối lưu lượng. Lưu lượng dành cho dịch vụ điểm cuối được resolved bằng DNS.
-
-#### Nội dung
-
-1. [Tổng quan về workshop](5.1-Workshop-overview/)
-2. [Chuẩn bị](5.2-Prerequiste/)
-3. [Truy cập đến S3 từ VPC](5.3-S3-vpc/)
-4. [Truy cập đến S3 từ TTDL On-premises](5.4-S3-onprem/)
-5. [VPC Endpoint Policies (làm thêm)](5.5-Policy/)
-6. [Dọn dẹp tài nguyên](5.6-Cleanup/)
+---
+*(Hãy click vào từng phần bên trên hoặc thanh menu bên trái để xem hướng dẫn chi tiết từng bước).*

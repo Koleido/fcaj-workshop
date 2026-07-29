@@ -1,112 +1,75 @@
 ---
-
 title: "Week 1 Worklog"
 date: 2026-06-08
 weight: 1
 chapter: false
 pre: " <b> 1.1. </b> "
-----------------------
-
-<!-- {{% notice warning %}}
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}} -->
+---
 
 ### Week 1 Objectives
 
-During the first week of the internship, my primary objective was to become familiar with the First Cloud AI Journey program, gain an overview of AWS, and prepare the necessary working environment for the upcoming weeks. As this was the foundation stage of the internship, I focused on understanding the workflow, learning fundamental cloud concepts, and performing my first hands-on activities on AWS.
+* Become familiar with the First Cloud AI Journey internship program.
+* Understand the fundamentals of AWS and Cloud Computing.
+* Prepare the development environment for future hands-on activities.
 
-### Activities Performed During Week 1
+---
 
-#### 1. Introduction to the Internship Program and Team Members
+### Tasks Carried Out This Week
 
-At the beginning of the week, I was introduced to the First Cloud AI Journey internship program, including its objectives, learning roadmap, and expected outcomes. I also had the opportunity to get acquainted with mentors and fellow participants. This helped me better understand the internship environment and establish communication channels for future collaboration and knowledge sharing.
+| Day | Task | Start Date | Completion Date | Reference Material |
+| --- | ---- | ---------- | --------------- | ------------------ |
+| 1 | - Attend the internship orientation session <br> - Get acquainted with mentors and fellow participants <br> - Review the internship roadmap and program requirements | 08/06/2026 | 08/06/2026 | First Cloud AI Journey |
+| 2 | - Learn the fundamentals of Cloud Computing <br> - Explore AWS service categories: Compute, Storage, Networking, Database, Security, and Monitoring | 09/06/2026 | 09/06/2026 | https://cloudjourney.awsstudygroup.com/ |
+| 3 | - Create an AWS Free Tier account <br> - Configure billing settings and account verification <br> - Explore the AWS Management Console | 10/06/2026 | 10/06/2026 | AWS Documentation |
+| 4 | - Install and configure AWS CLI <br> - Configure Access Key, Secret Access Key, and Default Region <br> - Execute basic AWS CLI commands | 11/06/2026 | 11/06/2026 | AWS CLI Documentation |
+| 5 | - Learn Amazon EC2 fundamentals <br> - Understand AMI, EBS, Elastic IP, and Security Groups <br> - Launch an EC2 instance and connect via SSH | 12/06/2026 | 13/06/2026 | AWS EC2 Documentation |
 
-#### 2. Learning the Fundamentals of AWS
+---
 
-I started studying AWS by learning the basic concepts of cloud computing and understanding the role of AWS in modern IT infrastructure. During this stage, I explored the main categories of AWS services, including:
+### Week 1 Achievements
 
-* Compute
-* Storage
-* Networking
-* Database
-* Security
-* Monitoring
+* Successfully joined the First Cloud AI Journey internship program.
 
-Having an overview of these service groups helped me build a general understanding of AWS before diving deeper into individual services in future weeks.
+* Acquired a basic understanding of AWS and Cloud Computing concepts.
 
-#### 3. Creating an AWS Free Tier Account
+* Explored the major AWS service categories:
+  * Compute
+  * Storage
+  * Networking
+  * Database
+  * Security
+  * Monitoring
 
-After gaining basic theoretical knowledge, I created an AWS Free Tier account to prepare for practical exercises. This step was essential because most upcoming workshops and labs require direct access to AWS resources. While creating the account, I paid attention to identity verification, billing configuration, and Free Tier limitations to avoid unexpected charges.
-
-### AWS Management Console
-
-![AWS Console Home](/images/Week1/AwsConsoleHome.png)
-
-During the practice session, I logged into the AWS Management Console to familiarize myself with the administration interface and observe the basic services.
-
-*AWS Console after logging in successfully.*
-
-#### 4. Exploring AWS Management Console and AWS CLI
-
-Next, I learned the two primary ways of interacting with AWS:
-
-* **AWS Management Console**: A web-based graphical interface used to manage AWS resources.
-* **AWS CLI (Command Line Interface)**: A command-line tool that allows users to interact with AWS services through terminal commands.
-
-I installed and configured AWS CLI on my personal computer, including setting up the Access Key, Secret Access Key, and Default Region. After configuration, I executed several basic commands to verify connectivity and become familiar with the command syntax.
-
-### AWS CLI Configuration
-
-I installed and tested the AWS CLI on my personal computer to familiarize myself with command-line operations.
-
-![AWS CLI](/images/Week1/AwsCli.png)
-
-*AWS CLI version and configuration check.*
-
-#### 5. Learning Amazon EC2 and Launching an Instance
-
-Towards the end of the week, I began learning about Amazon EC2, one of the core AWS services for cloud computing. I studied several important concepts, including:
-
-* Instance Types
-* Amazon Machine Images (AMI)
-* Elastic Block Store (EBS)
-* Elastic IP
-* SSH Connectivity
-
-After learning the theory, I launched my first EC2 instance and practiced connecting to it via SSH. I also explored the process of attaching an EBS volume to an EC2 instance. This activity helped me better understand how virtual servers are deployed and managed in a cloud environment.
-
-### Achievements
-
-By the end of the first week, I had achieved the following results:
-
-* Gained a basic understanding of AWS and its major service categories.
 * Successfully created and configured an AWS Free Tier account.
+
 * Became familiar with the AWS Management Console.
-* Installed and configured AWS CLI on my personal computer.
-* Performed several basic operations using AWS CLI.
-* Developed a foundational understanding of EC2, SSH, AMI, EBS, and Elastic IP.
-* Successfully launched and connected to an EC2 instance for the first time.
 
-### Challenges Encountered
+* Installed and configured AWS CLI successfully.
 
-During the first week, I faced several challenges:
+* Learned basic EC2 concepts including:
+  * Amazon Machine Image (AMI)
+  * Elastic Block Store (EBS)
+  * Elastic IP
+  * SSH Connectivity
 
-* AWS contains a large number of services, making it difficult to understand their relationships at first.
-* Concepts such as AMI, EBS, Elastic IP, and Security Groups were initially unfamiliar.
-* AWS CLI configuration required careful attention, as incorrect credentials could prevent successful authentication.
-* While connecting to EC2 via SSH, I needed to verify key pairs, security settings, and network configurations to troubleshoot connection issues.
+* Successfully launched and connected to an EC2 instance.
 
-Through studying documentation and repeated practice, I gradually became more comfortable with these tools and concepts.
+---
 
-### Lessons Learned
+### Challenges
 
-After completing the first week, I realized that learning cloud computing requires a strong foundation. Instead of trying to learn many services at once, it is more effective to understand how a single service works, how to manage it through the AWS Console, and how to perform equivalent operations using AWS CLI. Establishing this foundation will make it easier to learn more advanced AWS topics in the future.
+* AWS contains a large number of services, making it difficult to understand the relationship between them during the first week.
 
-### Plan for the Next Week
+* Several concepts such as AMI, EBS, Security Groups, and Elastic IP were completely new.
 
-For the following week, I plan to:
+* AWS CLI configuration required careful attention to credentials and region settings.
 
-* Review the fundamental AWS concepts learned during Week 1.
-* Continue practicing with EC2 to gain more hands-on experience.
-* Learn more about Amazon S3, VPC, and related networking concepts.
-* Document useful commands, procedures, and common issues encountered during practice sessions for future reference and reporting.
+---
+
+### Plan for Next Week
+
+* Continue exploring AWS through guided hands-on activities.
+
+* Gain practical experience with core AWS services.
+
+* Learn more about AWS service deployment using the AWS Management Console.

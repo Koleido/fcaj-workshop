@@ -12,7 +12,7 @@ chapter: false
 ⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
 {{% /notice %}} -->
 
-### Student Information:
+### Student Information
 &emsp; **Full Name:** Bui Pham Ngoc Khoi
 
 &emsp; **Phone Number:** 0968413318
@@ -29,7 +29,7 @@ chapter: false
 
 &emsp; **Internship Position:** Workforce Bootcamp - First Cloud AI Journey
 
-&emsp; **Internship Duration:** From 15/06/2026 to 12/11/2026
+&emsp; **Internship Duration:** From 15/06/2026 to 17/08/2026
 
 ![Profile picture](/images/HinhThe.jpg)
 
@@ -37,7 +37,7 @@ chapter: false
 
 1.  [Worklog](1-Worklog/)
 2.  [Proposal](2-Proposal/)
-3.  [BlogsPosted](3-BlogsPosted/)
+3.  [Blogs Posted](3-BlogsPosted/)
 4.  [Events Participated](4-EventParticipated/)
 5.  [Workshop](5-Workshop/)
 6.  [Self-evaluation](6-Self-evaluation/)
