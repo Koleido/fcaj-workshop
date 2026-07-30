@@ -63,9 +63,9 @@ This cloud-native architecture improves scalability, maintainability, and overal
 
 ## Blog Illustration
 
-![Blog 3](images/Blogs/Blog3-1.png)
+![Blog 3](/images/Blogs/Blog3-1.png)
 
-![Blog 3](images/Blogs/Blog3-2.png)
+![Blog 3](/images/Blogs/Blog3-2.png)
 
 ## Blog Link
 

@@ -42,7 +42,7 @@ The presentation by Danh Hoàng Hiếu Nghị gave me a clearer view of the jour
 
 The talk also helped me better understand the role of participating in learning programs, technology communities, and hands-on practice activities in the process of professional growth.
 
-![Event 2 picture](images/Event2/Event2-1.jpg)
+![Event 2 picture](/images/Event2/Event2-1.jpg)
 
 #### 2. A scalable URL shortening service on AWS
 
@@ -52,31 +52,31 @@ This was a highly practical topic focused on building a URL shortening service t
 - responding quickly,
 - and scaling easily as the number of users grows.
 
-![Event 2 picture](images/Event2/Event2-2.jpg)
+![Event 2 picture](/images/Event2/Event2-2.jpg)
 
 This topic made me realize that even a seemingly simple service like URL shortening still requires clear architectural thinking if it is to be implemented effectively in the cloud.
 
-![Event 2 picture](images/Event2/Event2-3.jpg)
+![Event 2 picture](/images/Event2/Event2-3.jpg)
 
 #### 3. A real-life story about culture at a multinational corporation
 
 The sharing session by Dat Pham and Cường Nguyễn was very practical, not only focusing on technical work but also discussing the working environment and culture in a multinational corporation. From this content, I understood that working in technology is not only about writing code or operating systems, but also about adapting to processes, communicating effectively, and collaborating with different departments.
 
-![Event 2 picture](images/Event2/Event2-4.jpg)
+![Event 2 picture](/images/Event2/Event2-4.jpg)
 
 This presentation helped me realize the importance of professionalism, work attitude, and adaptability in a large corporate environment.
 
-![Event 2 picture](images/Event2/Event2-5.jpg)
+![Event 2 picture](/images/Event2/Event2-5.jpg)
 
 #### 4. What does a DevOps Engineer really do?
 
 The sharing session by Trong H. Truong about the real role of a DevOps Engineer helped me better understand what this position actually involves in a company. Instead of viewing DevOps only as a theoretical concept, I learned that DevOps is the combination of software development and system operations, with the goal of shortening the development lifecycle, automating processes, and improving system stability.
 
-![Event 2 picture](images/Event2/Event2-6.jpg)
+![Event 2 picture](/images/Event2/Event2-6.jpg)
 
 From this session, I gained a more practical understanding of the tasks a DevOps Engineer usually handles, such as deployment, monitoring, automation, incident handling, and system optimization.
 
-![Event 2 picture](images/Event2/Event2-7.jpg)
+![Event 2 picture](/images/Event2/Event2-7.jpg)
 
 ### Achievements
 

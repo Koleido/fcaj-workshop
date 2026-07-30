@@ -63,9 +63,9 @@ Việc phân tách chức năng giữa các dịch vụ giúp hệ thống dễ 
 
 ## Hình minh họa bài viết
 
-![Blog 3](images/Blogs/Blog3-1.png)
+![Blog 3](/images/Blogs/Blog3-1.png)
 
-![Blog 3](images/Blogs/Blog3-2.png)
+![Blog 3](/images/Blogs/Blog3-2.png)
 
 ## Liên kết bài viết
 

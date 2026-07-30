@@ -106,6 +106,6 @@ In addition, I recognized the importance of reviewing materials after attending 
 
 <!-- *Insert photos taken before the meetup session started here.* -->
 *Photo taken before the meetup session started.*
-![Event 1 picture](images/Event1/Event1.jpg)
+![Event 1 picture](/images/Event1/Event1.jpg)
 
 > Overall, the event provided valuable exposure to modern technology trends, practical industry experiences, and professional development insights. It also motivated me to continue learning and preparing myself for future technical workshops and community events.

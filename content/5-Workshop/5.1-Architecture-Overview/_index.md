@@ -16,7 +16,7 @@ In this workshop, you will be guided step by step through the configuration and 
 
 The diagram below illustrates the overall system architecture, showing how each component and AWS service interacts within the cloud ecosystem:
 
-![System Architecture Diagram](images/5-Workshop/5.1-Architecture-Overview/architecture.png)
+![System Architecture Diagram](/images/5-Workshop/5.1-Architecture-Overview/architecture.png)
 
 The system adheres to the **Decoupled** principle to maximize performance, specifically:
 

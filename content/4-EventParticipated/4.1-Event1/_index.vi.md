@@ -96,6 +96,6 @@ Bên cạnh đó, tôi cũng nhận thấy tầm quan trọng của việc chu�
 
 <!-- *Thêm hình ảnh chụp trước khi buổi meetup bắt đầu tại đây.* -->
 *Hình ảnh chụp trước khi buổi meetup bắt đầu.*
-![Event 1 picture](images/Event1/Event1.jpg)
+![Event 1 picture](/images/Event1/Event1.jpg)
 
 > Tổng thể, sự kiện đã mang lại cho tôi một góc nhìn thực tế hơn về các chủ đề công nghệ đang được quan tâm hiện nay, đồng thời tạo động lực để tôi tiếp tục học hỏi và chuẩn bị tốt hơn cho các buổi chia sẻ tiếp theo.

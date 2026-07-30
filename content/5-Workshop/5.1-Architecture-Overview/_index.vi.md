@@ -16,7 +16,7 @@ Trong bài thực hành (workshop) này, bạn sẽ được hướng dẫn từ
 
 Dưới đây là sơ đồ kiến trúc tổng thể của hệ thống, minh họa cách các thành phần và các dịch vụ AWS tương tác với nhau trong hệ sinh thái đám mây:
 
-![Sơ đồ Kiến trúc Tổng thể](images/5-Workshop/5.1-Architecture-Overview/architecture.png)
+![Sơ đồ Kiến trúc Tổng thể](/images/5-Workshop/5.1-Architecture-Overview/architecture.png)
 
 Hệ thống tuân thủ nguyên tắc **Decoupled (Phân tách lỏng lẻo)** để tối ưu hóa hiệu suất, cụ thể:
 
