@@ -1,4 +1,4 @@
-baseURL = "https://koleido.github.io/"
+baseURL = "https://koleido.github.io/fcaj-workshop/"
 relativeURLs = false
 canonifyURLs = false
 defaultContentLanguage = "en"
