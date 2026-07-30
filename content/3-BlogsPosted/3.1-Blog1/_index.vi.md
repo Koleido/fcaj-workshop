@@ -73,9 +73,9 @@ Các dịch vụ này phối hợp tạo thành một kiến trúc cloud-native 
 
 ## Hình ảnh bài viết
 
-![Blog 1](/images/Blogs/Blog1-1.png)
+![Blog 1](images/Blogs/Blog1-1.png)
 
-![Blog 1](/images/Blogs/Blog1-2.png)
+![Blog 1](images/Blogs/Blog1-2.png)
 
 ## Liên kết bài viết
 

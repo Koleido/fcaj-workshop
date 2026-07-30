@@ -42,7 +42,7 @@ Phần trình bày của anh Danh Hoàng Hiếu Nghị mang lại cho tôi cái 
 
 Bài nói cũng giúp tôi thấy rõ vai trò của việc tham gia các chương trình học tập, cộng đồng công nghệ và các hoạt động thực hành thực tế trong quá trình trưởng thành nghề nghiệp.
 
-![Event 2 picture](/images/Event2/Event2-1.jpg)
+![Event 2 picture](images/Event2/Event2-1.jpg)
 
 #### 2. A scalable URL shortening service on AWS
 
@@ -52,31 +52,31 @@ Bài nói cũng giúp tôi thấy rõ vai trò của việc tham gia các chươ
 - phản hồi nhanh,
 - và dễ mở rộng khi số lượng người dùng tăng lên.
 
-![Event 2 picture](/images/Event2/Event2-2.jpg)
+![Event 2 picture](images/Event2/Event2-2.jpg)
 
 Chủ đề này giúp tôi nhận ra rằng ngay cả một dịch vụ tưởng chừng đơn giản như rút gọn URL cũng đòi hỏi tư duy kiến trúc rõ ràng nếu muốn triển khai thực tế trên cloud.
 
-![Event 2 picture](/images/Event2/Event2-3.jpg)
+![Event 2 picture](images/Event2/Event2-3.jpg)
 
 #### 3. Câu chuyện thực tế đến văn hóa tại tập đoàn đa quốc gia
 
 Phần chia sẻ của anh Dat Pham và anh Cường Nguyễn mang nhiều tính thực tiễn, không chỉ xoay quanh công việc kỹ thuật mà còn đề cập đến môi trường làm việc và văn hóa trong một tập đoàn đa quốc gia. Từ nội dung này, tôi hiểu rằng làm việc trong lĩnh vực công nghệ không chỉ là viết code hay vận hành hệ thống, mà còn là khả năng thích nghi với quy trình, giao tiếp hiệu quả và phối hợp với nhiều bộ phận khác nhau.
 
-![Event 2 picture](/images/Event2/Event2-4.jpg)
+![Event 2 picture](images/Event2/Event2-4.jpg)
 
 Bài trình bày này giúp tôi nhận ra sự quan trọng của tư duy chuyên nghiệp, thái độ làm việc và khả năng thích nghi trong môi trường doanh nghiệp lớn.
 
-![Event 2 picture](/images/Event2/Event2-5.jpg)
+![Event 2 picture](images/Event2/Event2-5.jpg)
 
 #### 4. What does a DevOps Engineer really do?
 
 Phần chia sẻ của anh Trong H. Truong về vai trò thực tế của một DevOps Engineer giúp tôi hiểu rõ hơn công việc của vị trí này trong doanh nghiệp. Thay vì chỉ nhìn DevOps như một khái niệm lý thuyết, tôi hiểu rằng DevOps là sự kết hợp giữa phát triển phần mềm và vận hành hệ thống, với mục tiêu rút ngắn vòng đời phát triển, tự động hóa quy trình và nâng cao độ ổn định của hệ thống.
 
-![Event 2 picture](/images/Event2/Event2-6.jpg)
+![Event 2 picture](images/Event2/Event2-6.jpg)
 
 Từ buổi chia sẻ này, tôi có thêm cái nhìn thực tế về những công việc mà một DevOps Engineer thường phải làm như triển khai, giám sát, tự động hóa, xử lý sự cố và tối ưu hệ thống.
 
-![Event 2 picture](/images/Event2/Event2-7.jpg)
+![Event 2 picture](images/Event2/Event2-7.jpg)
 
 ### Kết quả đạt được
 

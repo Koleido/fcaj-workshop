@@ -25,7 +25,7 @@ chapter: false
 
 &emsp; **Thời gian thực tập:** Từ ngày 15/06/2026 đến ngày 17/08/2026
 
-![Ảnh đại diện](/images/HinhThe.jpg)
+![Ảnh đại diện](images/HinhThe.jpg)
 
 
 

@@ -98,9 +98,9 @@ The cloud-native design provides several important advantages:
 
 ## Blog Illustration
 
-![Blog 2](/images/Blogs/Blog2-1.png)
+![Blog 2](images/Blogs/Blog2-1.png)
 
-![Blog 2](/images/Blogs/Blog2-2.png)
+![Blog 2](images/Blogs/Blog2-2.png)
 
 ## Blog Link
 

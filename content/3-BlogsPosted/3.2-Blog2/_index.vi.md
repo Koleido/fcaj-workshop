@@ -98,9 +98,9 @@ Việc áp dụng kiến trúc Cloud-Native mang lại nhiều lợi ích như:
 
 ## Hình ảnh bài viết
 
-![Blog 2](/images/Blogs/Blog2-1.png)
+![Blog 2](images/Blogs/Blog2-1.png)
 
-![Blog 2](/images/Blogs/Blog2-2.png)
+![Blog 2](images/Blogs/Blog2-2.png)
 
 ## Liên kết bài viết
 

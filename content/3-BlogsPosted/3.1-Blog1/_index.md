@@ -73,9 +73,9 @@ Together, these services form a cloud-native architecture that improves scalabil
 
 ## Blog Illustration
 
-![Blog 1](/images/Blogs/Blog1-1.png)
+![Blog 1](images/Blogs/Blog1-1.png)
 
-![Blog 1](/images/Blogs/Blog1-2.png)
+![Blog 1](images/Blogs/Blog1-2.png)
 
 ## Blog Link
 
