@@ -5,28 +5,107 @@ weight : 6
 chapter : false
 pre : " <b> 5.6. </b> "
 ---
-Congratulations on completing this workshop! 
-In this workshop, you learned architecture patterns for accessing Amazon S3 without using the Public Internet. 
-+ By creating a gateway endpoint, you enabled direct communication between EC2 resources and Amazon S3, without traversing an Internet Gateway. 
-+ By creating an interface endpoint you extended S3 connectivity to resources running in your on-premises data center via AWS Site-to-Site VPN or Direct Connect. 
 
-#### clean up
-1. Navigate to Hosted Zones on the left side of Route 53 console. Click the name of *s3.us-east-1.amazonaws.com* zone. Click Delete and confirm deletion by typing delete. 
+After completing the workshop and taking all necessary screenshots for the report, it is very important to **delete all the resources** you have created. Leaving unused resources running will continue to generate costs (even in Free Tier after the free period ends).
 
-![hosted zone](/images/5-Workshop/5.6-Cleanup/delete-zone.png)
+Follow the steps below **in order** to clean up everything safely.
 
-2. Disassociate the Route 53 Resolver Rule - myS3Rule from "VPC Onprem" and Delete it. 
+---
 
-![hosted zone](/images/5-Workshop/5.6-Cleanup/vpc.png)
+### 1. Terminate the EC2 Instance
 
-4. Open the CloudFormation console  and delete the two CloudFormation Stacks that you created for this lab:
-+ PLOnpremSetup
-+ PLCloudSetup
+**Step 1:** Go to the **EC2** Console → click **Instances**.
 
-![delete stack](/images/5-Workshop/5.6-Cleanup/delete-stack.png)
+**Step 2:** Select the instance `HCMUT-Cinema-Backend-Server` → click **Instance state** → **Terminate instance**.
 
-5. Delete S3 buckets
-+ Open S3 console
-+ Choose the bucket we created for the lab, click and confirm empty. Click delete and confirm delete.
+**Step 3:** Confirm the termination.
 
-![delete s3](/images/5-Workshop/5.6-Cleanup/delete-s3.png)
+![Terminate EC2](/images/5-Workshop/5.6-Cleanup/5.6.1.jpg)
+
+![Terminate EC2](/images/5-Workshop/5.6-Cleanup/5.6.2.jpg)
+
+---
+
+### 2. Delete the S3 Bucket
+
+**Step 1:** Go to the **S3** Console.
+
+**Step 2:** Select your frontend bucket → click **Empty**. Confirm by typing `permanently delete`.
+
+**Step 3:** After the bucket is empty, select it again → click **Delete**. Type the bucket name to confirm.
+
+![Terminate S3](/images/5-Workshop/5.6-Cleanup/5.6.3.jpg)
+
+![Terminate S3](/images/5-Workshop/5.6-Cleanup/5.6.4.jpg)
+
+![Terminate S3](/images/5-Workshop/5.6-Cleanup/5.6.5.jpg)
+
+![Terminate S3](/images/5-Workshop/5.6-Cleanup/5.6.6.jpg)
+
+---
+
+### 3. Delete the RDS Database
+
+**Step 1:** Go to the **RDS** Console → **Databases**.
+
+**Step 2:** Select `hcmut-cinema-db` → click **Actions** → **Delete**.
+
+**Step 3:** 
+- Uncheck “Create final snapshot” (unless you want to keep data).
+- Uncheck "Retain automated backups".
+- Check "I acknowledge that upon instance deletion, automated backups, including system snapshots and point-in-time recovery, will no longer be available."
+- Type `delete me` to confirm.
+- Click **Delete**.
+
+> **Note:** It may take a few minutes for the database to be fully deleted.  
+
+![Terminate RDS Database](/images/5-Workshop/5.6-Cleanup/5.6.7.jpg)
+
+![Terminate RDS Database](/images/5-Workshop/5.6-Cleanup/5.6.8.jpg)
+
+---
+
+### 4. Delete the DynamoDB Table
+
+**Step 1:** Go to the **DynamoDB** Console → **Tables**.
+
+**Step 2:** Select the table `HCMUTCinema_SeatLocks` → click **Delete**.
+
+**Step 3:** Confirm the deletion by typing `delete`.
+
+![Terminate DynamoDB Table](/images/5-Workshop/5.6-Cleanup/5.6.9.jpg)
+
+![Terminate DynamoDB Table](/images/5-Workshop/5.6-Cleanup/5.6.10.jpg)
+
+---
+
+### 5. Delete the SES Email Identity
+
+**Step 1:** Go to the **Amazon SES** Console → **Identities**.
+
+**Step 2:** Select the verified email address → click **Delete**.
+
+**Step 3:** Confirm the deletion.
+
+![Terminate SES](/images/5-Workshop/5.6-Cleanup/5.6.11.jpg)
+
+![Terminate SES](/images/5-Workshop/5.6-Cleanup/5.6.12.jpg)
+
+---
+
+### 6. Delete the IAM User & Access Key
+
+**Step 1:** Go to the **IAM** Console → **Users**.
+
+**Step 2:** Click on the user `hcmut-cinema-backend`.
+
+**Step 3:** Go to the **Security credentials** tab → deactivate all **Access keys**.
+
+**Step 4:** Go back and click **Delete** user. Confirm by typing the username.
+
+![Terminate IAM](/images/5-Workshop/5.6-Cleanup/5.6.13.jpg)
+
+![Terminate IAM](/images/5-Workshop/5.6-Cleanup/5.6.14.jpg)
+
+
+---

@@ -1,37 +1,108 @@
 ---
-title : "Dọn dẹp tài nguyên"
-date : 2024-01-01
-weight : 6
-chapter : false
-pre : " <b> 5.6. </b> "
+title: "Clean up"
+date: 2024-01-01
+weight: 6
+chapter: false
+pre: " <b> 5.6. </b> "
 ---
 
-#### Dọn dẹp tài nguyên
+Sau khi hoàn thành workshop và đã chụp đầy đủ các ảnh cần thiết cho báo cáo, việc **xóa toàn bộ tài nguyên** đã tạo ra là rất quan trọng. Nếu để các tài nguyên chạy mà không sử dụng sẽ tiếp tục phát sinh chi phí (ngay cả khi đang dùng Free Tier sau khi hết thời gian miễn phí).
 
-Xin chúc mừng bạn đã hoàn thành xong lab này!
-Trong lab này, bạn đã học về các mô hình kiến trúc để truy cập Amazon S3 mà không sử dụng Public Internet.
+Hãy thực hiện các bước dưới đây **theo đúng thứ tự** để dọn dẹp mọi thứ một cách an toàn.
 
-+ Bằng cách tạo Gateway endpoint, bạn đã cho phép giao tiếp trực tiếp giữa các tài nguyên EC2 và Amazon S3, mà không đi qua Internet Gateway.
-Bằng cách tạo Interface endpoint, bạn đã mở rộng kết nối S3 đến các tài nguyên chạy trên trung tâm dữ liệu trên chỗ của bạn thông qua AWS Site-to-Site VPN hoặc Direct Connect.
+---
 
-#### Dọn dẹp
-1. Điều hướng đến Hosted Zones trên phía trái của bảng điều khiển Route 53. Nhấp vào tên của  s3.us-east-1.amazonaws.com zone. Nhấp vào Delete và xác nhận việc xóa bằng cách nhập từ khóa "delete".
+### 1. Terminate EC2 Instance
 
-![hosted zone](/images/5-Workshop/5.6-Cleanup/delete-zone.png)
+**Bước 1:** Vào **EC2** Console → chọn **Instances**.
 
-2. Disassociate Route 53 Resolver Rule - myS3Rule from "VPC Onprem" and Delete it. 
+**Bước 2:** Chọn instance `HCMUT-Cinema-Backend-Server` → nhấn **Instance state** → **Terminate instance**.
 
-![hosted zone](/images/5-Workshop/5.6-Cleanup/vpc.png)
+**Bước 3:** Xác nhận việc terminate.
 
-4.Mở console của CloudFormation và xóa hai stack CloudFormation mà bạn đã tạo cho bài thực hành này:
-+ PLOnpremSetup
-+ PLCloudSetup
+![Terminate EC2](/images/5-Workshop/5.6-Cleanup/5.6.1.jpg)
 
-![delete stack](/images/5-Workshop/5.6-Cleanup/delete-stack.png)
+![Terminate EC2](/images/5-Workshop/5.6-Cleanup/5.6.2.jpg)
 
-5. Xóa các S3 bucket
+---
 
-+ Mở bảng điều khiển S3
-+ Chọn bucket chúng ta đã tạo cho lab, nhấp chuột và xác nhận là empty. Nhấp Delete và xác nhận delete.
-+ 
-![delete s3](/images/5-Workshop/5.6-Cleanup/delete-s3.png)
+### 2. Xóa S3 Bucket
+
+**Bước 1:** Vào **S3** Console.
+
+**Bước 2:** Chọn bucket frontend của bạn → nhấn **Empty**. Xác nhận bằng cách gõ `permanently delete`.
+
+**Bước 3:** Sau khi bucket đã trống, chọn lại bucket → nhấn **Delete**. Gõ tên bucket để xác nhận.
+
+![Terminate S3](/images/5-Workshop/5.6-Cleanup/5.6.3.jpg)
+
+![Terminate S3](/images/5-Workshop/5.6-Cleanup/5.6.4.jpg)
+
+![Terminate S3](/images/5-Workshop/5.6-Cleanup/5.6.5.jpg)
+
+![Terminate S3](/images/5-Workshop/5.6-Cleanup/5.6.6.jpg)
+
+---
+
+### 3. Xóa RDS Database
+
+**Bước 1:** Vào **RDS** Console → **Databases**.
+
+**Bước 2:** Chọn `hcmut-cinema-db` → nhấn **Actions** → **Delete**.
+
+**Bước 3:** 
+- Bỏ tick “Create final snapshot” (trừ khi bạn muốn giữ lại dữ liệu).
+- Bỏ tick "Retain automated backups".
+- Tick vào ô "I acknowledge that upon instance deletion, automated backups, including system snapshots and point-in-time recovery, will no longer be available."
+- Gõ `delete me` để xác nhận.
+- Nhấn **Delete**.
+
+> **Lưu ý:** Việc xóa database có thể mất vài phút để hoàn tất.
+
+![Terminate RDS Database](/images/5-Workshop/5.6-Cleanup/5.6.7.jpg)
+
+![Terminate RDS Database](/images/5-Workshop/5.6-Cleanup/5.6.8.jpg)
+
+---
+
+### 4. Xóa DynamoDB Table
+
+**Bước 1:** Vào **DynamoDB** Console → **Tables**.
+
+**Bước 2:** Chọn bảng `HCMUTCinema_SeatLocks` → nhấn **Delete**.
+
+**Bước 3:** Xác nhận bằng cách gõ `delete`.
+
+![Terminate DynamoDB Table](/images/5-Workshop/5.6-Cleanup/5.6.9.jpg)
+
+![Terminate DynamoDB Table](/images/5-Workshop/5.6-Cleanup/5.6.10.jpg)
+
+---
+
+### 5. Xóa SES Email Identity
+
+**Bước 1:** Vào **Amazon SES** Console → **Identities**.
+
+**Bước 2:** Chọn địa chỉ email đã xác minh → nhấn **Delete**.
+
+**Bước 3:** Xác nhận việc xóa.
+
+![Terminate SES](/images/5-Workshop/5.6-Cleanup/5.6.11.jpg)
+
+![Terminate SES](/images/5-Workshop/5.6-Cleanup/5.6.12.jpg)
+
+---
+
+### 6. Xóa IAM User & Access Key
+
+**Bước 1:** Vào **IAM** Console → **Users**.
+
+**Bước 2:** Nhấn vào user `hcmut-cinema-backend`.
+
+**Bước 3:** Chuyển sang tab **Security credentials** → deactivate toàn bộ **Access keys**.
+
+**Bước 4:** Quay lại và nhấn **Delete** user. Xác nhận bằng cách gõ tên username.
+
+![Terminate IAM](/images/5-Workshop/5.6-Cleanup/5.6.13.jpg)
+
+![Terminate IAM](/images/5-Workshop/5.6-Cleanup/5.6.14.jpg)
