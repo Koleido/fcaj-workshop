@@ -1,9 +1,9 @@
 ---
-title : "Clean up"
-date : 2024-01-01
-weight : 6
-chapter : false
-pre : " <b> 5.6. </b> "
+title: "Clean up"
+date: 2026-07-28
+weight: 5
+chapter: false
+pre: " <b> 5.5. </b> "
 ---
 
 After completing the workshop and taking all necessary screenshots for the report, it is very important to **delete all the resources** you have created. Leaving unused resources running will continue to generate costs (even in Free Tier after the free period ends).

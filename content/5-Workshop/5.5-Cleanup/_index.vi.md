@@ -1,9 +1,9 @@
 ---
-title: "Clean up"
-date: 2024-01-01
-weight: 6
+title: "Dọn dẹp"
+date: 2026-07-28
+weight: 5
 chapter: false
-pre: " <b> 5.6. </b> "
+pre: " <b> 5.5. </b> "
 ---
 
 Sau khi hoàn thành workshop và đã chụp đầy đủ các ảnh cần thiết cho báo cáo, việc **xóa toàn bộ tài nguyên** đã tạo ra là rất quan trọng. Nếu để các tài nguyên chạy mà không sử dụng sẽ tiếp tục phát sinh chi phí (ngay cả khi đang dùng Free Tier sau khi hết thời gian miễn phí).

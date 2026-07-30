@@ -18,6 +18,7 @@ The deployment process simulates a real-world Production setup with all essentia
 2. [Backend Deployment (Amazon EC2)](5.2-Deploy-EC2-Backend/)
 3. [Frontend Deployment (Amazon S3)](5.3-Deploy-S3-Frontend/)
 4. [Database Setup (Amazon RDS & DynamoDB)](5.4-Database-RDS-DynamoDB/)
+5. [Cleanup](5.5-Cleanup/)
 
 ---
 *(Click on each section above or use the left-hand menu to view detailed step-by-step instructions.)*

@@ -18,7 +18,7 @@ Quá trình triển khai sẽ mô phỏng lại một môi trường Production 
 2. [Triển khai Backend (Amazon EC2)](5.2-Deploy-EC2-Backend/)
 3. [Triển khai Frontend (Amazon S3)](5.3-Deploy-S3-Frontend/)
 4. [Thiết lập Database (Amazon RDS & DynamoDB)](5.4-Database-RDS-DynamoDB/)
-5. [Tích hợp Gửi Email (Amazon SES)](5.5-Integrate-SES/)
+5. [Dọn dẹp](5.5-Cleanup/)
 
 ---
 *(Hãy click vào từng phần bên trên hoặc thanh menu bên trái để xem hướng dẫn chi tiết từng bước).*

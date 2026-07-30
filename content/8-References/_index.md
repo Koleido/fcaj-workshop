@@ -12,34 +12,51 @@ This section provides the references and project resources used throughout the i
 
 The source code of the **HCMUT Cinema** project is available on GitHub.
 
-- **Project Repository:**  
-  https://github.com/HuyPT3508/AWS_Final.git
+- **Project Repository:** https://github.com/HuyPT3508/AWS_Final.git
 
 ## Project Demonstration Video
 
 A demonstration video showing the project's main features and deployment is available at the following link.
 
-- **Demo Video (Google Drive):**  
-  [Demo Workshop](https://drive.google.com/file/d/1BRA68CK4h_CU5k95bLJXEMu5BOlVSGKD/view?fbclid=IwY2xjawTYJHxwZG9mBWV4dG4DYWVtAjEwAGJyaWQRMUJUb01JRElEVHRKdDZmZ3VzcnRjBmFwcF9pZBAyMjIwMzkxNzg4MjAwODkyAAEeEaFg9KZTlykSHtYtjE-ocbwJiz69KkvpCAFNB9dNz5milvVd2u92iE6TxCA_aem_0xoQqA9ykwwGaCRJulr0tQ)
+- **Demo Video (Google Drive):**  [Demo Workshop](https://drive.google.com/file/d/1BRA68CK4h_CU5k95bLJXEMu5BOlVSGKD/view)
 
-## Workshop Website
+## Project Deployment
 
-The workshop website developed during the internship can be accessed here.
+The project consists of two separate web interfaces deployed on Amazon S3 Static Website Hosting.
 
-- **Workshop Website:**  
-  [HCMUT Cinema](http://hcmut-cinema-frontend-huypt.s3-website-ap-southeast-1.amazonaws.com/?fbclid=IwY2xjawTS_vpwZG9mBWV4dG4DYWVtAjEwAGJyaWQRMU1heHJHS252WTJhVmpNNElzcnRjBmFwcF9pZBAyMjIwMzkxNzg4MjAwODkyAAEejPwRrEX8nn6XPD4kJGGH1vRad-ha60EG7_8xskj5r7eqolbWpd2ceTwQuJ0_aem_VXyDmuTBZHQslQz6ebU-wQ#home)
+### Customer Portal
+
+The customer interface allows users to:
+
+- Browse available movies
+- View movie details
+- Select seats
+- Book cinema tickets
+
+**Website:** [HCMUT Cinema](http://hcmut-cinema-frontend-huypt.s3-website-ap-southeast-1.amazonaws.com)
+
+### Administrator Portal
+
+The administrator interface is used for management operations, including:
+
+- Manage movie information
+- Add new movies
+- Edit existing movies
+- Delete movies
+
+**Website:** [HCMUT Cinema (Admin)](http://hcmut-cinema-frontend-huypt.s3-website-ap-southeast-1.amazonaws.com/admin.html)
 
 ## Additional References
 
-Throughout the internship, the following official resources were frequently used for learning and implementation:
+Throughout the internship, the following official AWS resources were frequently used for studying, implementation, deployment, and troubleshooting:
 
 - AWS Skill Builder
 - AWS Documentation
 - AWS Well-Architected Framework
-- Amazon DynamoDB Documentation
 - Amazon EC2 Documentation
-- Amazon RDS Documentation
 - Amazon S3 Documentation
+- Amazon RDS Documentation
+- Amazon DynamoDB Documentation
 - Amazon SES Documentation
 
-These resources provided technical guidance and best practices for designing and implementing cloud-native applications on AWS.
+These official resources provided architectural guidance, service documentation, and best practices for designing and implementing cloud-native applications on AWS.

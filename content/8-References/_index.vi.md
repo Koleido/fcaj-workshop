@@ -6,40 +6,57 @@ chapter: false
 pre: " <b> 8. </b> "
 ---
 
-Phần này tổng hợp các tài liệu, mã nguồn và sản phẩm được sử dụng trong quá trình thực tập, bao gồm mã nguồn dự án, video demo và các tài liệu kỹ thuật của AWS.
+Phần này tổng hợp các tài liệu tham khảo và nguồn tài nguyên được sử dụng trong suốt quá trình thực tập, bao gồm mã nguồn dự án, video minh họa và các tài liệu học tập.
 
 ## Mã nguồn dự án
 
 Mã nguồn của dự án **HCMUT Cinema** được lưu trữ trên GitHub.
 
-- **GitHub Repository:**  
-  https://github.com/HuyPT3508/AWS_Final.git
+- **Kho mã nguồn:** https://github.com/HuyPT3508/AWS_Final.git
 
-## Video Demo Dự án
+## Video minh họa dự án
 
-Video giới thiệu các chức năng chính và quá trình triển khai dự án được lưu trữ trên Google Drive.
+Video trình bày các chức năng chính và quá trình triển khai của dự án có thể được xem tại đường dẫn sau.
 
-- **Google Drive Demo:**  
-  [Demo Workshop](https://drive.google.com/file/d/1BRA68CK4h_CU5k95bLJXEMu5BOlVSGKD/view?fbclid=IwY2xjawTYJHxwZG9mBWV4dG4DYWVtAjEwAGJyaWQRMUJUb01JRElEVHRKdDZmZ3VzcnRjBmFwcF9pZBAyMjIwMzkxNzg4MjAwODkyAAEeEaFg9KZTlykSHtYtjE-ocbwJiz69KkvpCAFNB9dNz5milvVd2u92iE6TxCA_aem_0xoQqA9ykwwGaCRJulr0tQ)
+- **Video Demo (Google Drive):** [Demo Workshop](https://drive.google.com/file/d/1BRA68CK4h_CU5k95bLJXEMu5BOlVSGKD/view)
 
-## Website Workshop
+## Triển khai dự án
 
-Website Workshop được xây dựng trong chương trình thực tập.
+Dự án được triển khai với hai giao diện web riêng biệt trên dịch vụ **Amazon S3 Static Website Hosting**.
 
-- **Workshop Website:**  
-  [HCMUT Cinema](http://hcmut-cinema-frontend-huypt.s3-website-ap-southeast-1.amazonaws.com/?fbclid=IwY2xjawTS_vpwZG9mBWV4dG4DYWVtAjEwAGJyaWQRMU1heHJHS252WTJhVmpNNElzcnRjBmFwcF9pZBAyMjIwMzkxNzg4MjAwODkyAAEejPwRrEX8nn6XPD4kJGGH1vRad-ha60EG7_8xskj5r7eqolbWpd2ceTwQuJ0_aem_VXyDmuTBZHQslQz6ebU-wQ#home)
+### Giao diện khách hàng
 
-## Tài liệu tham khảo
+Giao diện dành cho khách hàng cho phép người dùng:
 
-Trong quá trình thực hiện dự án và hoàn thành chương trình thực tập, nhóm thường xuyên tham khảo các nguồn tài liệu chính thức sau:
+- Xem danh sách phim đang chiếu
+- Xem thông tin chi tiết của phim
+- Lựa chọn vị trí ghế ngồi
+- Đặt vé xem phim trực tuyến
+
+**Website:** [HCMUT Cinema](http://hcmut-cinema-frontend-huypt.s3-website-ap-southeast-1.amazonaws.com)
+
+### Giao diện quản trị viên
+
+Giao diện quản trị viên được sử dụng để thực hiện các chức năng quản lý, bao gồm:
+
+- Quản lý thông tin phim
+- Thêm phim mới
+- Chỉnh sửa thông tin phim
+- Xóa phim khỏi hệ thống
+
+**Website:** [HCMUT Cinema (Admin)](http://hcmut-cinema-frontend-huypt.s3-website-ap-southeast-1.amazonaws.com/admin.html)
+
+## Tài liệu tham khảo bổ sung
+
+Trong suốt quá trình thực tập, các tài liệu chính thức của AWS dưới đây được sử dụng thường xuyên để nghiên cứu, triển khai, cấu hình và xử lý các vấn đề phát sinh:
 
 - AWS Skill Builder
 - AWS Documentation
 - AWS Well-Architected Framework
-- Amazon DynamoDB Documentation
 - Amazon EC2 Documentation
-- Amazon RDS Documentation
 - Amazon S3 Documentation
+- Amazon RDS Documentation
+- Amazon DynamoDB Documentation
 - Amazon SES Documentation
 
-Các tài liệu trên cung cấp kiến thức nền tảng, hướng dẫn triển khai và các thực tiễn tốt nhất để xây dựng ứng dụng Cloud-Native trên nền tảng AWS.
+Các tài liệu chính thức này cung cấp hướng dẫn về kiến trúc hệ thống, tài liệu kỹ thuật của từng dịch vụ và các thực tiễn tốt nhất (best practices) trong việc thiết kế và triển khai các ứng dụng Cloud-Native trên nền tảng AWS.
