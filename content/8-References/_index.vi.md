@@ -20,7 +20,7 @@ Mã nguồn của dự án **HCMUT Cinema** được lưu trữ trên GitHub.
 Video giới thiệu các chức năng chính và quá trình triển khai dự án được lưu trữ trên Google Drive.
 
 - **Google Drive Demo:**  
-  https://drive.google.com/...
+  [Demo Workshop](https://drive.google.com/file/d/1BRA68CK4h_CU5k95bLJXEMu5BOlVSGKD/view?fbclid=IwY2xjawTYJHxwZG9mBWV4dG4DYWVtAjEwAGJyaWQRMUJUb01JRElEVHRKdDZmZ3VzcnRjBmFwcF9pZBAyMjIwMzkxNzg4MjAwODkyAAEeEaFg9KZTlykSHtYtjE-ocbwJiz69KkvpCAFNB9dNz5milvVd2u92iE6TxCA_aem_0xoQqA9ykwwGaCRJulr0tQ)
 
 ## Website Workshop
 

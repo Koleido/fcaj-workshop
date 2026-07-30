@@ -20,7 +20,7 @@ The source code of the **HCMUT Cinema** project is available on GitHub.
 A demonstration video showing the project's main features and deployment is available at the following link.
 
 - **Demo Video (Google Drive):**  
-  https://drive.google.com/...
+  [Demo Workshop](https://drive.google.com/file/d/1BRA68CK4h_CU5k95bLJXEMu5BOlVSGKD/view?fbclid=IwY2xjawTYJHxwZG9mBWV4dG4DYWVtAjEwAGJyaWQRMUJUb01JRElEVHRKdDZmZ3VzcnRjBmFwcF9pZBAyMjIwMzkxNzg4MjAwODkyAAEeEaFg9KZTlykSHtYtjE-ocbwJiz69KkvpCAFNB9dNz5milvVd2u92iE6TxCA_aem_0xoQqA9ykwwGaCRJulr0tQ)
 
 ## Workshop Website
 
