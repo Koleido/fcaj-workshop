@@ -21,7 +21,7 @@ pre: " <b> 4.3. </b> "
 
 ### Event Information
 
-- **Time:** 13/06/2026
+- **Time:** 25/07/2026
 - **Attendance Method:** In person at the office
 - **Reference Materials:** Slide decks for each topic provided by the organizers
 
