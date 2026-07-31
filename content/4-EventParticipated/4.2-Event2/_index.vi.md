@@ -34,6 +34,12 @@ Buổi meeting doanh nghiệp ngày 13/06/2026 là một hoạt động chia s�
 - **Trong H. Truong (Trương Hoàng Trọng)** – *What does a DevOps Engineer really do?*  
   DevOps Engineer @ Endava Vietnam
 
+### Check-in
+
+Trước khi chương trình bắt đầu, tôi đã check-in tại địa điểm tổ chức và chụp ảnh để ghi lại quá trình tham gia sự kiện.
+
+![Event 2](/images/Event2/Event2.jpg)
+
 ### Nội dung nổi bật
 
 #### 1. From First Cloud AI Journey to AWS Partner

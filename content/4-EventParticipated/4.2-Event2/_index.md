@@ -34,6 +34,12 @@ The company meeting held on 13/06/2026 was a knowledge-sharing activity where sp
 - **Trong H. Truong (Trương Hoàng Trọng)** – *What does a DevOps Engineer really do?*  
   DevOps Engineer @ Endava Vietnam
 
+### Check-in
+
+Before the event started, I checked in at the venue and took a photo to document my participation.
+
+![Event 3](/images/Event2/Event2.jpg)
+
 ### Key Highlights
 
 #### 1. From First Cloud AI Journey to AWS Partner
